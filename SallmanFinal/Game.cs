@@ -1402,7 +1402,7 @@ namespace SallmanFinal
 
             string toss = Console.ReadLine();
 
-            while(toss != "y" && toss != "n")
+            while(toss != "a" && toss != "b")
             {
                 Console.WriteLine("");
                 Console.WriteLine("Hurry, enter a for red, b for gold.");
@@ -1414,10 +1414,69 @@ namespace SallmanFinal
 
             if (luck)
             {
-
+                if (toss == "a")
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("The coin hits the ground and you almost can't bare to look.");
+                    Console.ReadKey();
+                    Console.WriteLine("Summoning the courage to look down, you find...");
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("It's red!  Just like you guessed.");
+                    Console.ReadKey();
+                }
+                else if (toss == "b")
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("The coin hits the ground and you almost can't bare to look.");
+                    Console.ReadKey();
+                    Console.WriteLine("Summoning the courage to look down, you find...");
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("It's gold!  Just like you guessed.");
+                    Console.ReadKey();
+                }
             }
 
+            if(toss == "a")
+            {
+                Console.WriteLine("");
+                Console.WriteLine("The coin hits the ground and you almost can't bare to look.");
+                Console.ReadKey();
+                Console.WriteLine("Summoning the courage to look down, you find...");
+                Console.ReadKey();
+                Console.WriteLine("");
+                Console.WriteLine("It's red.  That wasn't what you guessed.");
+                Console.ReadKey();
+                Console.WriteLine("");
+                Console.WriteLine("In an instant the creature lunges forward, again you drop your cellphone.");
+                Console.ReadKey();
+                Console.WriteLine("");
+                Console.WriteLine("This time you don’t have the chance to fight back.");
 
+                EndGame failed1 = new EndGame();
+                failed1.Dead(Inventory);
+            }
+            else if(toss == "b")
+            {
+                Console.WriteLine("");
+                Console.WriteLine("The coin hits the ground and you almost can't bare to look.");
+                Console.ReadKey();
+                Console.WriteLine("Summoning the courage to look down, you find...");
+                Console.ReadKey();
+                Console.WriteLine("");
+                Console.WriteLine("It's gold.  That wasn't what you guessed.");
+                Console.ReadKey();
+                Console.WriteLine("");
+                Console.WriteLine("In an instant the creature lunges forward, again you drop your cellphone.");
+                Console.ReadKey();
+                Console.WriteLine("");
+                Console.WriteLine("This time you don’t have the chance to fight back.");
+
+                EndGame failed1 = new EndGame();
+                failed1.Dead(Inventory);
+            }
+            
 
         }
 
