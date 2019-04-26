@@ -9,6 +9,7 @@ namespace SallmanFinal
         static string characterName = "Unknown Player";
         static string beginGame;
         static int occupation;
+        static string viewStats;
 
         public static void StartGame()
         {
@@ -39,6 +40,7 @@ namespace SallmanFinal
 
             Console.WriteLine("");
             NameCharacter();
+
 
         }
 
@@ -120,7 +122,7 @@ namespace SallmanFinal
                                                                                                                      
             ";
 
-            
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.Clear();
             Console.WriteLine("");
             Console.WriteLine(bang);
@@ -137,6 +139,7 @@ namespace SallmanFinal
             Console.ReadKey();
             Console.Clear();
             Console.WriteLine("");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("The ringing in your ears is disorienting as you slowly come to.");
             Console.ReadKey();
 
@@ -156,7 +159,7 @@ namespace SallmanFinal
             Console.WriteLine("1. I'm an actor.  I've always enjoyed working with other people and I get along with just about anyone.");
             Console.WriteLine("2. I'm skilled at hard labor, I like to work with my hands and I'm physically very fit.");
             Console.WriteLine("3. I work with computers.  I'm very comfortable working through complex problems to find a solution.");
-            Console.WriteLine("4. I consider myself a jack of all trades, I'll take on whatever job you have.  I might not be the best, but I'll get the job done one way or another.");
+            Console.WriteLine("4. I consider myself a jack of all trades, I'll take on whatever job you have.");
             Console.WriteLine("");
             Console.WriteLine("Please enter in a number 1 through 4.");
 
@@ -170,9 +173,95 @@ namespace SallmanFinal
                 Int32.TryParse(input, out occupation);
             }
 
-            Console.WriteLine("Cool");
+            Console.WriteLine("");
 
+            Stats character = new Stats();
+            character.OccupationStats(occupation);
+
+            Console.WriteLine("");
+
+            Console.WriteLine("Speaking of stats, would you like to view your stats now?  Enter y for yes or n for no.");
+
+            viewStats = Console.ReadLine();
+
+            while (viewStats != "n")
+            {
+
+                if (viewStats == "y")
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Your stats are as follows:");
+                    character.ViewStats();
+                    Console.ReadKey();
+                    viewStats = "n";
+                }
+                else if (viewStats != "y" || viewStats != "n")
+                {
+                    Console.WriteLine("Perhaps I wasn't clear.  Please enter y for yes or n for no.");
+                    viewStats = Console.ReadLine();
+                }
+            }
+
+            viewStats = "s";
+
+            Console.WriteLine("");
+            Console.WriteLine("That's right, you're starting to remember.");
             Console.ReadKey();
+            Console.WriteLine("You take a moment to observe your surroundings.  You seem to be in a car, although considering the condition it's in it's hard to even call it a car.");
+            Console.ReadKey();
+            Console.WriteLine("You're sitting in the driver's seat, the entirety of the passenger's side is caved in.");
+            Console.WriteLine("You don't think anyone was with you in the car... You hope no one was with you in the car.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You reach up and touch your forehead, it stings and when you look at your hand you can see fresh blood on it.");
+            Console.WriteLine("You think you can still open your door if you want to get out of the car.  You try the handle.");
+            Console.ReadKey();
+
+            string thunk = @"
+████████╗██╗  ██╗██╗   ██╗███╗   ██╗██╗  ██╗
+╚══██╔══╝██║  ██║██║   ██║████╗  ██║██║ ██╔╝
+   ██║   ███████║██║   ██║██╔██╗ ██║█████╔╝ 
+   ██║   ██╔══██║██║   ██║██║╚██╗██║██╔═██╗ 
+   ██║   ██║  ██║╚██████╔╝██║ ╚████║██║  ██╗
+   ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝
+                                            
+            ";
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine(thunk);
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.ReadKey("");
+
+            Console.Clear();
+
+            Console.WriteLine("");
+            Console.WriteLine("You tumble unceremoniously to the ground as the door pops open.");
+            Console.ReadKey();
+            Console.WriteLine("Your body aches as you slowly get to your feet.  It's a miracle you didn't break anything from that crash.");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("You look up to the sky to see the sun is just starting to go down, you've got an hour or two of daylight left at best.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("Looking around you find yourself on a stretch of road surrounded by a dense forest of trees.");
+            Console.WriteLine("It seems like your car must have veered off the road at some point and collided with one of the trees.");
+            Console.WriteLine("Did you fall asleep at the wheel?  That doesn't sound like you.");
+            Console.ReadKey();
+
+            Console.WriteLine("Where were you going again?");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You can't seem to remember.");
+            Console.WriteLine("");
+            Console.ReadKey();
+
+            Console.WriteLine("You fumble in your pocket, fishing out your cellphone.  The battery reads 72%, it doesn't seem to be getting any signal.");
+            Console.WriteLine("There are three unread text messages however.  Two are from a contact simply called <3<3, the other is from someone named Charon.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You ");
+
 
         }
 
