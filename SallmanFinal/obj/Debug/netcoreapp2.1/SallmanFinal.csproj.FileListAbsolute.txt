@@ -1,0 +1,11 @@
+J:\School\Object Final\SallmanFinal\SallmanFinal\bin\Debug\netcoreapp2.1\SallmanFinal.deps.json
+J:\School\Object Final\SallmanFinal\SallmanFinal\bin\Debug\netcoreapp2.1\SallmanFinal.runtimeconfig.json
+J:\School\Object Final\SallmanFinal\SallmanFinal\bin\Debug\netcoreapp2.1\SallmanFinal.runtimeconfig.dev.json
+J:\School\Object Final\SallmanFinal\SallmanFinal\bin\Debug\netcoreapp2.1\SallmanFinal.dll
+J:\School\Object Final\SallmanFinal\SallmanFinal\bin\Debug\netcoreapp2.1\SallmanFinal.pdb
+J:\School\Object Final\SallmanFinal\SallmanFinal\obj\Debug\netcoreapp2.1\SallmanFinal.csprojAssemblyReference.cache
+J:\School\Object Final\SallmanFinal\SallmanFinal\obj\Debug\netcoreapp2.1\SallmanFinal.csproj.CoreCompileInputs.cache
+J:\School\Object Final\SallmanFinal\SallmanFinal\obj\Debug\netcoreapp2.1\SallmanFinal.AssemblyInfoInputs.cache
+J:\School\Object Final\SallmanFinal\SallmanFinal\obj\Debug\netcoreapp2.1\SallmanFinal.AssemblyInfo.cs
+J:\School\Object Final\SallmanFinal\SallmanFinal\obj\Debug\netcoreapp2.1\SallmanFinal.dll
+J:\School\Object Final\SallmanFinal\SallmanFinal\obj\Debug\netcoreapp2.1\SallmanFinal.pdb
