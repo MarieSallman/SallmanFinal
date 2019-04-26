@@ -356,6 +356,140 @@ namespace SallmanFinal
             Console.WriteLine("");
             Console.WriteLine("You'll have to make a choice.");
             Console.ReadKey();
+
+            FirstChoice();
+        }
+
+        static void FirstChoice()
+        {
+            string choice1 = "";
+
+            Console.WriteLine("");
+            Console.WriteLine("Which way would you like to go?");
+            Console.WriteLine("a. Toward the setting sun.");
+            Console.WriteLine("b. Away from the setting sun.");
+            Console.WriteLine("");
+            Console.WriteLine("Please enter a or b.");
+
+            choice1 = Console.ReadLine();
+
+            while (choice1 != "a")
+            {
+                if (choice1 != "b")
+                {
+                    Console.WriteLine("You have entered {0}, this is not a possible choice.  Please choose a or b.");
+                    choice1 = Console.ReadLine();
+                }
+                else
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("You have chosen to walk into the darkness.");
+                    Console.ReadKey();
+
+                    Console.Clear();
+                    Console.WriteLine("");
+                    Console.WriteLine("You start your journey down the road, walking toward the direction you were coming from.");
+                    Console.WriteLine("");
+                    Console.ReadKey();
+
+                    Console.WriteLine("You walk.");
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("And walk...");
+
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("And walk...");
+                    Console.ReadKey();
+
+                    Console.WriteLine("");
+                    Console.WriteLine("And walk.");
+
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("You walk for over three hours.  Your throat is dry.");
+                    Console.WriteLine("The sky is dark.  You use the flashlight on your phone to illuminate your path.");
+
+                    Console.ReadKey();
+                    Console.WriteLine("You stop for a moment to breath.");
+                    Console.WriteLine("");
+                    Console.ReadKey();
+
+                    Console.WriteLine("...");
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("What was that?");
+                    Console.ReadKey();
+
+                    Console.WriteLine("");
+                    Console.WriteLine("It almost sounded like...");
+                    Console.ReadKey();
+                    Console.Clear();
+
+                    string crack = @"
+ ▄████████    ▄████████    ▄████████  ▄████████    ▄█   ▄█▄ 
+███    ███   ███    ███   ███    ███ ███    ███   ███ ▄███▀ 
+███    █▀    ███    ███   ███    ███ ███    █▀    ███▐██▀   
+███         ▄███▄▄▄▄██▀   ███    ███ ███         ▄█████▀    
+███        ▀▀███▀▀▀▀▀   ▀███████████ ███        ▀▀█████▄    
+███    █▄  ▀███████████   ███    ███ ███    █▄    ███▐██▄   
+███    ███   ███    ███   ███    ███ ███    ███   ███ ▀███▄ 
+████████▀    ███    ███   ███    █▀  ████████▀    ███   ▀█▀ 
+             ███    ███                           ▀         
+                    ";
+
+                    Console.ForegroundColor = ConsoleColor.Red;
+
+                    Console.WriteLine("");
+                    Console.WriteLine(crack);
+
+                    Console.ReadKey();
+
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("");
+                    Console.WriteLine("What the--");
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("Before you can finish your thought something darts in front of your field of vision.");
+                    Console.ReadKey();
+                    Console.WriteLine("As fast as you can, you shine your cellphone's flashlight on the shadow infront of you.");
+                    Console.ReadKey();
+                    Console.ForegroundColor = ConsoleColor.Red;
+
+                    string face = @"
+    ⣿⣿⣿⡉⢀⣾⣿⡟⣩⣭⣭⡈⠙⢿⣿⣿⣿⣿⣿⡿⣻⣿⣿⣿⣿⣿⣿⣿⡇⠄ 
+    ⣿⣿⡗⠄⣼⣿⣿⢸⡿⠉⠉⢻⡆⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢠⠄ 
+    ⣿⡻⠁⢠⣿⣿⣿⣦⡛⠢⠴⠛⠁⣸⣿⣿⣿⣿⡿⠛⢉⣉⣉⡙⢻⣿⣿⣗⠄⠄ 
+    ⠷⠁⠄⢰⣿⣿⣿⣷⣬⣭⣼⣷⣿⣿⣿⣿⣿⡏⢀⣾⠟⠛⢿⣿⣄⣿⣿⡏⠄⠄ 
+    ⠄⠄⠄⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠳⢀⣀⡼⢟⣼⣿⡟⠄⠄⠄ 
+    ⠄⠄⠄⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣮⣒⣲⣶⣾⣿⣿⠏⠄⠄⠄⢠ 
+    ⠄⠄⠄⠸⣿⣽⣿⣿⣿⣿⣉⣿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠄⠄⠄⢠⣷ 
+    ⠄⠄⠄⠄⢻⣷⢻⣿⣿⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⠏⠄⠄⠄⠄⠄⢀⣾⣿ 
+    ⠄⠄⠄⠄⠄⢻⣧⡙⢿⣿⣿⣿⣿⣿⡿⣿⣿⣿⠿⠛⠁⠄⠄⠄⠄⠄⢠⣿⣿⣿ 
+    ⠄⠄⠄⡀⠄⠈⣿⣿⣶⣭⣭⣭⣿⣾⡿⠟⠋⠁⠄⠄⠄⠄⠄⠄⠄⢠⣿⣿⣿⣿ 
+    ⠄⠄⠎⠄⠄⣨⣿⣿⣿⣿⣿⣿⠋⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⣀⡲⣿⣿⣿⣿⣿
+                    ";
+                    Console.WriteLine(face);
+
+                    Console.ReadKey();
+                    Console.Clear();
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+
+                    Console.WriteLine("The figure is massive.");
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("It lunges.");
+                    Console.ReadKey();
+                    Console.Clear();
+
+                    EndGame firstend = new EndGame();
+                    firstend.Dead(Inventory);
+                }
+            }
+
+
         }
 
 

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SallmanFinal
 {
-    public class Items
+    /*public class Items
     {
         public string name;
         int stats;
@@ -13,5 +13,5 @@ namespace SallmanFinal
         {
             Random randomNumber; 
         }
-    }
+    }*/
 }

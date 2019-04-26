@@ -4,7 +4,25 @@ using System.Text;
 
 namespace SallmanFinal
 {
-    class Monster
+    class Monster: Game
     {
+
+
+        /*public void Attack()
+        {
+
+        }
+        
+
+        public void Attack(weapon)
+        {
+
+        }
+
+        public void Attack(weapon, advantage)
+        {
+
+        }*/
+
     }
 }
