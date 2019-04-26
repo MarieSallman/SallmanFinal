@@ -8,15 +8,15 @@ namespace SallmanFinal
     {
         public static int strength = 5;
         public static int intelligence = 5;
-        public static int charisma = 5;
+        public static int luck = 5;
 
         
 
         public void OccupationStats(int occupation) {
             if(occupation == 1)
             {
-                Console.WriteLine("Charisma has increased by 3.");
-                charisma = 8;
+                Console.WriteLine("Luck has increased by 3.");
+                luck = 8;
             }else if(occupation == 2)
             {
                 Console.WriteLine("Strength has increased by 3.");
@@ -27,9 +27,9 @@ namespace SallmanFinal
                 intelligence = 8;
             }else if(occupation == 4)
             {
-                Console.WriteLine("Strength, charisma, and intelligence have increased by 1.");
+                Console.WriteLine("Strength, luck, and intelligence have increased by 1.");
                 strength = 6;
-                charisma = 6;
+                luck = 6;
                 intelligence = 6;
             }
         }
@@ -37,7 +37,7 @@ namespace SallmanFinal
         public void ViewStats()
         {
             Console.WriteLine("Strength: {0}", strength);
-            Console.WriteLine("Charisma: {0}", charisma);
+            Console.WriteLine("Luck: {0}", luck);
             Console.WriteLine("Intelligence: {0}", intelligence);
         }
 
@@ -45,7 +45,7 @@ namespace SallmanFinal
         {
             strength = 5;
             intelligence = 5;
-            charisma = 5;
+            luck = 5;
         }
 
         public bool SkillCheck(int type, int check)
@@ -73,8 +73,8 @@ namespace SallmanFinal
             }else if(type == 3)
             {
                 
-                bool charResult = CharismaCheck(charisma, check);
-                if (charResult)
+                bool luckResult = LuckCheck(luck, check);
+                if (luckResult)
                 {
                     return true;
                 }
@@ -122,19 +122,19 @@ namespace SallmanFinal
             return false;
         }
 
-        private bool CharismaCheck(int charisma, int check)
+        private bool LuckCheck(int luck, int check)
         {
-            if (charisma > check)
+            if (luck > check)
             {
                 Console.WriteLine("");
-                Console.WriteLine("Charisma check passed.");
+                Console.WriteLine("Luck check passed.");
                 Console.WriteLine("");
                 return true;
             }
-            else if (charisma < check)
+            else if (luck < check)
             {
                 Console.WriteLine("");
-                Console.WriteLine("Charisma check failed.");
+                Console.WriteLine("Luck check failed.");
                 Console.WriteLine("");
                 return false;
             }

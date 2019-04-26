@@ -158,7 +158,7 @@ namespace SallmanFinal
             Console.WriteLine("");
             Console.WriteLine("You work as a...  A...  What was your occupation again?");
             Console.WriteLine("");
-            Console.WriteLine("1. I'm an actor.  I've always enjoyed working with other people and I get along with just about anyone.");
+            Console.WriteLine("1. I'm an gambler.  Ask anyone, I'm the luckiest person around.");
             Console.WriteLine("2. I'm skilled at hard labor, I like to work with my hands and I'm physically very fit.");
             Console.WriteLine("3. I work with computers.  I'm very comfortable working through complex problems to find a solution.");
             Console.WriteLine("4. I consider myself a jack of all trades, I'll take on whatever job you have.");
@@ -1295,7 +1295,130 @@ namespace SallmanFinal
 
         static void CharonAlive()
         {
+            Random randomNumber = new Random();
+
+            int test = randomNumber.Next(0, 9);
+
+
+            Console.WriteLine("");
+            Console.WriteLine("You follow the disgusting amalgamation of parts as it begins walking backward,");
+            Console.ReadKey();
+            Console.WriteLine("never facing away from you.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("It leads you down the path.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You wonder if it will ever stop");
+            Console.ReadKey();
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("The speed at which the creature halts almost sends you stumbling into its boney outstretched arms.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You stop yourself, coming to your senses.");
+            Console.ReadKey();
+            Console.WriteLine("It does not flinch, it cannot.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You take a moment to look around.  Not much has changed.");
+
+            Console.WriteLine("Your flashlight illuminates the shadowy figures of trees surrounding you.");
+            Console.ReadKey();
+            Console.WriteLine("The sky is a deep black.  A giant moon hangs above your head.  You can’t see the stars.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("Panning your light over the bumpy road beneath your feet you find something catches your eye.");
+            Console.ReadKey();
+            Console.WriteLine("A glint.");
+            Console.ReadKey();
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("");
+           
+            Console.WriteLine("A coin?");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You look up at the creature before you, it has not budged.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("Bending down you examine the coin before you.  It’s unlike any coin you’ve seen before.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("One side the coin is a deep crimson red, the other bright gold.");
+
+            Console.WriteLine("There don’t appear to be any markings on either side.");
+            Console.ReadKey();
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("");
+            Console.WriteLine("You glance back up at the beast and jump back in surprise.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("Its head, once facing toward the heavens, now stared straight into your soul.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("No.");
+            Console.ReadKey();
+            Console.WriteLine("That's not right.");
+            Console.ReadKey();
+            Console.WriteLine("It's staring at the coin.");
+            Console.ReadKey();
+            Console.WriteLine("");
             
+            Console.WriteLine("...");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("It does not move.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You look back at the coin.  Does he want you to toss it?");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("...");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("You don't know.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You decide to try.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You toss the coin up.  It’s customary to call out a side when flipping a coin.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("What do you call?");
+            Console.WriteLine("a. Red");
+            Console.WriteLine("b. Gold");
+
+            string toss = Console.ReadLine();
+
+            while(toss != "y" && toss != "n")
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Hurry, enter a for red, b for gold.");
+            }
+
+
+            Stats skillLuck = new Stats();
+            bool luck = skillLuck.SkillCheck(3, test);
+
+            if (luck)
+            {
+
+            }
+
+
+
         }
 
     }
