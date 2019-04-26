@@ -376,7 +376,7 @@ namespace SallmanFinal
 
             while (choice1 != "a")
             {
-                if (choice1 != "b" && choice1 != "a")
+                if (choice1 != "b")
                 {
                     Console.WriteLine("You have entered {0}, this is not a possible choice.  Please choose a or b.", choice1);
                     choice1 = Console.ReadLine();
@@ -523,7 +523,7 @@ namespace SallmanFinal
 
         static void FirstFight()
         {
-            string choice2;
+            
 
             Console.WriteLine("");
             Console.WriteLine("You walk for what feels like days, although the clock on your phone says it's only one hour.");
@@ -606,15 +606,16 @@ namespace SallmanFinal
             Console.WriteLine("");
             Console.WriteLine("Please enter a, b, or c to continue.");
 
-            choice2 = Console.ReadLine();
+            string choice2 = Console.ReadLine();
 
-            while(choice2 != "b")
+            while (choice2 != "b")
             {
-                if(choice2 != "a" && choice2 != "c")
+                if (choice2 != "a" && choice2 != "c")
                 {
                     Console.WriteLine("Please enter a, b, or c to continue.");
                     choice2 = Console.ReadLine();
-                }else if(choice2 == "a")
+                }
+                else if (choice2 == "a")
                 {
                     Console.WriteLine("");
                     Console.WriteLine("You choose to investigate the sound immediately.");
@@ -670,10 +671,14 @@ namespace SallmanFinal
                     EndGame secondend = new EndGame();
                     secondend.Dead(Inventory);
 
-                
+
 
                 }
-
+                else if (choice2 == "c")
+                {
+                    Console.WriteLine("None");
+                }
+            }
                 Console.WriteLine("");
                 Console.WriteLine("You rush over to the trees on your left, using your cellphone's flashlight to search for some kind of weapon.");
                 Console.WriteLine("");
@@ -907,10 +912,6 @@ namespace SallmanFinal
 
             }
 
-            
-
-        }
-
         static void Charon()
         {
             Console.WriteLine("");
@@ -918,7 +919,7 @@ namespace SallmanFinal
             Stats skill1 = new Stats();
             bool skill3 = skill1.SkillCheck(1, 6);
 
-            if(skill3 == true)
+            if (skill3 == true)
             {
                 Console.WriteLine("You have the strangest feeling that you should wait and see what happens.");
                 Console.WriteLine("");
@@ -930,17 +931,18 @@ namespace SallmanFinal
             Console.WriteLine("a. Hide in the woods to avoid the figure.");
             Console.WriteLine("b. Remain where you are.");
             Console.WriteLine("Please enter the letter a or b.");
-            
+
             string runTalk = Console.ReadLine();
 
-            while(runTalk != "b")
+            while (runTalk != "b")
             {
-                if(runTalk != "b" && runTalk != "a")
+                if (runTalk != "b" && runTalk != "a")
                 {
                     Console.WriteLine("");
                     Console.WriteLine("Please enter the letter a or b.");
                     runTalk = Console.ReadLine();
-                }else if(runTalk == "a")
+                }
+                else if (runTalk == "a")
                 {
                     Console.WriteLine("You dive into the nearby woods and turn off the flashlight on your cellphone.");
                     Console.WriteLine("You push yourself down into the bushes, covering yourself in the foliage.");
@@ -1151,15 +1153,16 @@ namespace SallmanFinal
             string followCharon = Console.ReadLine();
 
 
-            while(followCharon != "a")
+            while (followCharon != "a")
             {
-                if(followCharon != "b")
+                if (followCharon != "b")
                 {
                     Console.WriteLine("");
                     Console.WriteLine("Sorry, you must make a choice.");
                     followCharon = Console.ReadLine();
 
-                }else if(followCharon == "b")
+                }
+                else if (followCharon == "b")
                 {
                     Console.WriteLine("");
                     Console.WriteLine("You refuse to look at this creature anymore, you attack without a second thought.");
@@ -1184,4 +1187,8 @@ namespace SallmanFinal
         }
 
     }
-}
+
+        
+
+    }
+

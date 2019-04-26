@@ -23,7 +23,7 @@ namespace SallmanFinal
         {
             double chance = strength + weapon;
 
-            if(chance >= 7)
+            if(chance >= 6)
             {
                 strength++;
                 return true;
