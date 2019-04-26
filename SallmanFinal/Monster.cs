@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SallmanFinal
 {
-    class Monster: Game
+    class Monster: Stats
     {
 
 
@@ -19,14 +19,36 @@ namespace SallmanFinal
         }
         
 
-        public void Attack(weapon)
+        public bool Attack(double weapon)
         {
+            double chance = strength + weapon;
 
+            if(chance >= 7)
+            {
+                strength++;
+                return true;
+
+            }else if(chance < 7)
+            {
+                return false;
+            }
+            return false;
         }
 
-        public void Attack(weapon, advantage)
+        public bool Attack(double weapon, double advantage)
         {
+            double chance = strength + weapon + advantage;
 
+            if (chance >= 9)
+            {
+                strength++;
+                return true;
+            }
+            else if (chance < 9)
+            {
+                return false;
+            }
+            return false;
         }
 
         public void Flash()

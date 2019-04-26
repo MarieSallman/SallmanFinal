@@ -375,12 +375,12 @@ namespace SallmanFinal
 
             while (choice1 != "a")
             {
-                if (choice1 != "b")
+                if (choice1 != "b" && choice1 != "a")
                 {
                     Console.WriteLine("You have entered {0}, this is not a possible choice.  Please choose a or b.", choice1);
                     choice1 = Console.ReadLine();
                 }
-                else
+                else if (choice1 == "b")
                 {
                     Console.WriteLine("");
                     Console.WriteLine("You have chosen to walk into the darkness.");
@@ -512,7 +512,7 @@ namespace SallmanFinal
             }
 
             Console.WriteLine("");
-            Console.WriteLine("You decide not to ignore the ominous text.");
+            Console.WriteLine("You decide to trust the ominous text.");
             Console.ReadKey();
 
             FirstFight();
@@ -525,7 +525,7 @@ namespace SallmanFinal
             string choice2;
 
             Console.WriteLine("");
-            Console.WriteLine("You walk for what feels days, although the clock on your phone says it's only one hour.");
+            Console.WriteLine("You walk for what feels like days, although the clock on your phone says it's only one hour.");
             Console.WriteLine("The path in front of you seems to stretch in to infinity.");
             Console.WriteLine("The sky above is streaked with deep blues and purples.");
             Console.WriteLine("The trees around you feel like they're getting closer to you with each step you take.");
@@ -595,7 +595,12 @@ namespace SallmanFinal
             Console.WriteLine("");
 
             Stats skill1 = new Stats();
-            skill1.SkillCheck(1,6);
+            bool skill2 = skill1.SkillCheck(1,6);
+
+            if (skill2 == true)
+            {
+                Console.WriteLine("You have a feeling searching for a weapon would be your best option.");
+            }
 
             Console.WriteLine("");
             Console.WriteLine("Please enter a, b, or c to continue.");
@@ -742,7 +747,7 @@ namespace SallmanFinal
                 Console.ForegroundColor = ConsoleColor.White;
 
                 Console.WriteLine("");
-                Console.WriteLine("A hulking, hunched figure rushes toward you.  In a panic you drop you cellphone.");
+                Console.WriteLine("A hulking, hunched figure rushes toward you.  In a panic you drop your cellphone.");
                 Console.WriteLine("It skitters helplessly out of reach, sending your immediate surroundings in to darkness.");
                 Console.ReadKey();
 
@@ -771,18 +776,73 @@ namespace SallmanFinal
                 {
                     if(weapon1 == 1)
                     {
-                        
-                    }else if(weapon1 == 2)
-                    {
+                        Console.WriteLine("You hurl the large rock at the beast as hard as you can, praying your throw connects.");
 
-                    }else if(weapon1 == 3)
-                    {
-
-                    }else if(weapon1 == 4)
-                    {
+                        Monster monsterattack = new Monster();
+                        bool attackAnswer = monsterattack.Attack(weapon1);
+                        if (attackAnswer)
+                        {
+                            Console.WriteLine("Your aim was true.  The beast screeches in pain and retreats for the time being.");
+                        }
+                        else
+                        {
+                            EndGame monsterDeath = new EndGame();
+                            monsterDeath.Dead(Inventory);
+                        }
 
                     }
-                }else if(equip == n){
+                    else if(weapon1 == 2)
+                    {
+                        Console.WriteLine("Putting all your force behind your attack, you swing your large branch like a baseball bat.");
+
+                        Monster monsterattack = new Monster();
+                        bool attackAnswer = monsterattack.Attack(weapon1);
+                        if (attackAnswer)
+                        {
+                            Console.WriteLine("Your aim was true.  The beast screeches in pain and retreats for the time being.");
+                        }
+                        else
+                        {
+                            EndGame monsterDeath = new EndGame();
+                            monsterDeath.Dead(Inventory);
+                        }
+
+                    }
+                    else if(weapon1 == 3)
+                    {
+                        Console.WriteLine("Wielding the sharp stone like a knife you slash forward, hoping to cut deep in the beast.");
+
+                        Monster monsterattack = new Monster();
+                        bool attackAnswer = monsterattack.Attack(weapon1);
+                        if (attackAnswer)
+                        {
+                            Console.WriteLine("Your aim was true.  The beast screeches in pain and retreats for the time being.");
+                        }
+                        else
+                        {
+                            EndGame monsterDeath = new EndGame();
+                            monsterDeath.Dead(Inventory);
+                        }
+
+                    }
+                    else if(weapon1 == 4)
+                    {
+                        Console.WriteLine("Using your sharp stick you lunge forward, hoping to spear the creature through.");
+
+                        Monster monsterattack = new Monster();
+                        bool attackAnswer = monsterattack.Attack(weapon1);
+                        if (attackAnswer)
+                        {
+                            Console.WriteLine("Your aim was true.  The beast screeches in pain and retreats for the time being.");
+                        }
+                        else
+                        {
+                            EndGame monsterDeath = new EndGame();
+                            monsterDeath.Dead(Inventory);
+                        }
+
+                    }
+                }else if(equip == "n"){
                     Monster attack = new Monster();
                     attack.Attack();
 
@@ -790,11 +850,97 @@ namespace SallmanFinal
                     ending.Dead(Inventory);
                 }
 
+                Console.ReadKey();
+                Console.Clear();
+                Console.WriteLine("");
+
+                
+                Console.WriteLine("Breathing heavily you fumble for your cellphone.");
+                Console.WriteLine("Thankfully it doesn't seem to be damaged, but the battery does read 42%.");
+                Console.WriteLine("You have to find a way back to civilization.  Fast.");
+                Console.WriteLine("Whatever that thing was you're sure it's not going to stay away forever.");
+
+                Console.ReadKey();
+
+                Console.WriteLine("");
+                Console.WriteLine("You resume walking at a significantly faster pace than before.");
+                Console.WriteLine("You don't know how long you'll be able to keep this pace up,");
+                Console.WriteLine("but you have a feeling you got lucky when you hit the beast.");
+                Console.WriteLine("You'd rather not try your luck again.");
+
+                Console.ReadKey();
+
+                Console.Clear();
+                Console.WriteLine("");
+                Console.WriteLine("You don't have to walk for long before you are stopped in your tracks.");
+                Console.ReadKey();
+
+                Console.WriteLine("In the distance you see something.  It's almost too dark to make out,");
+                Console.WriteLine("but in the faint moonlight you can make out a small silhouette.");
+                Console.ReadKey();
+
+                Console.WriteLine("");
+                Console.WriteLine("...");
+
+                Console.ReadKey();
+                Console.WriteLine("You strain your eyes, trying to determine if the figure is the creature you attacked before.");
+                Console.ReadKey();
+                Console.WriteLine("It seems to be... Growing?");
+                Console.ReadKey();
+                Console.WriteLine("No, that's not right.");
+                Console.ReadKey();
+                Console.WriteLine("");
+                Console.WriteLine("It's...");
+                Console.ReadKey();
+
+                Console.WriteLine("");
+                Console.WriteLine("It's... Coming closer...");
+
+                Console.ReadKey();
+                Console.WriteLine("It's coming closer so fast.  It must.... It must be running!");
+                Console.ReadKey();
 
 
-
+                Charon();
 
             }
+
+            
+
+        }
+
+        static void Charon()
+        {
+            Console.WriteLine("");
+
+            Stats skill1 = new Stats();
+            bool skill3 = skill1.SkillCheck(1, 6);
+
+            if(skill3 == true)
+            {
+                Console.WriteLine("You have the strangest feeling that you should wait and see what happens.");
+                Console.WriteLine("");
+            }
+
+            Console.WriteLine("The figure is coming closer, what will you do?");
+
+            Console.WriteLine("");
+            Console.WriteLine("a. Hide in the woods to avoid the figure.");
+            Console.WriteLine("b. Remain where you are.");
+            Console.WriteLine("Please enter the letter a or b.");
+            
+            string runTalk = Console.ReadLine();
+
+            while(runTalk != "b")
+            {
+                if(runTalk != "b" && runTalk != "a")
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Please enter the letter a or b.");
+                    runTalk = Console.ReadLine();
+                }
+            }
+
 
         }
 

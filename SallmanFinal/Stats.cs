@@ -6,10 +6,9 @@ namespace SallmanFinal
 {
     class Stats : Game
     {
-        static int strength = 5;
-        static int intelligence = 5;
-        static int charisma = 5;
-        static int luck = 5;
+        public static int strength = 5;
+        public static int intelligence = 5;
+        public static int charisma = 5;
 
         
 
@@ -40,7 +39,6 @@ namespace SallmanFinal
             Console.WriteLine("Strength: {0}", strength);
             Console.WriteLine("Charisma: {0}", charisma);
             Console.WriteLine("Intelligence: {0}", intelligence);
-            Console.WriteLine("Luck: {0}", luck);
         }
 
         public void ResetStats()
@@ -48,7 +46,6 @@ namespace SallmanFinal
             strength = 5;
             intelligence = 5;
             charisma = 5;
-            luck = 5;
         }
 
         public bool SkillCheck(int type, int check)
@@ -78,15 +75,6 @@ namespace SallmanFinal
                 
                 bool charResult = CharismaCheck(charisma, check);
                 if (charResult)
-                {
-                    return true;
-                }
-                else { return false; }
-            }else if(type == 4)
-            {
-                
-                bool luckResult = LuckCheck(luck, check);
-                if (luckResult)
                 {
                     return true;
                 }
@@ -154,24 +142,6 @@ namespace SallmanFinal
             return false;
         }
 
-        private bool LuckCheck(int luck, int check)
-        {
-            if (luck > check)
-            {
-                Console.WriteLine("");
-                Console.WriteLine("Luck check passed.");
-                Console.WriteLine("");
-                return true;
-            }
-            else if (luck < check)
-            {
-                Console.WriteLine("");
-                Console.WriteLine("Luck check failed.");
-                Console.WriteLine("");
-                return false;
-            }
-
-            return false;
-        }
+        
     }
 }

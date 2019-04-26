@@ -6,9 +6,9 @@ namespace SallmanFinal
 {
     public class Items
     {
-        static double[] weapons = { 1, 2, 3, 4};
-        static double itemName;
-        static double itemAttack;
+        private static double[] weapons = { 1, 2, 3, 4};
+        private static double itemName;
+        private static double itemAttack;
 
         public static double Weapon()
         {
