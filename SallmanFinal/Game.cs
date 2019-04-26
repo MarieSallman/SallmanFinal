@@ -11,6 +11,7 @@ namespace SallmanFinal
         static int occupation;
         static string viewStats;
         static List<string> Inventory = new List<string>();
+        static double weapon2;
 
         public static void StartGame()
         {
@@ -679,6 +680,7 @@ namespace SallmanFinal
                 Console.ReadKey();
 
                 double weapon1 = Items.Weapon();
+                weapon2 = weapon1;
 
                 if(weapon1 == 1)
                 {
@@ -1159,7 +1161,23 @@ namespace SallmanFinal
 
                 }else if(followCharon == "b")
                 {
+                    Console.WriteLine("");
+                    Console.WriteLine("You refuse to look at this creature anymore, you attack without a second thought.");
 
+                    Monster charon = new Monster();
+                    bool charon1 = charon.Attack(weapon2, 2);
+
+                    if (charon1)
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("The grim mockery of the human form falls to the ground, it's body twitching and convulsing.");
+                        Console.ReadKey();
+                        Console.WriteLine("You're not sure how you managed to find the strength, but you feel triumphant.");
+                        Console.ReadKey();
+                        Console.WriteLine("");
+                        Console.WriteLine("You step over the twitching corpse gingerly, making sure not to let it's vibrant green blood touch you.");
+                        Console.ReadKey();
+                    }
                 }
             }
 
