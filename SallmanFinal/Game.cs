@@ -938,6 +938,77 @@ namespace SallmanFinal
                     Console.WriteLine("");
                     Console.WriteLine("Please enter the letter a or b.");
                     runTalk = Console.ReadLine();
+                }else if(runTalk == "a")
+                {
+                    Console.WriteLine("You dive into the nearby woods and turn off the flashlight on your cellphone.");
+                    Console.WriteLine("You push yourself down into the bushes, covering yourself in the foliage.");
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("...");
+                    Console.ReadKey();
+                    Console.WriteLine("...");
+                    Console.ReadKey();
+                    Console.WriteLine("...");
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("You wait for the creature to pass, but nothing happens.");
+
+                    Console.ReadKey();
+
+                    Console.WriteLine("You could have sworn there was a figure running toward you.");
+                    Console.WriteLine("Were your eyes just playing tricks on you?");
+                    Console.ReadKey();
+
+                    Console.Write("");
+                    Console.WriteLine("You hold your breath, listening for any sound.");
+                    Console.WriteLine("");
+                    Console.ReadKey();
+                    Console.WriteLine("...");
+                    Console.WriteLine("");
+                    Console.ReadKey();
+                    Console.WriteLine("...");
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("...");
+                    Console.ReadKey();
+
+                    Console.Clear();
+                    Console.WriteLine("");
+                    Console.WriteLine("Nothing.");
+                    Console.ReadKey();
+
+                    string behind = @"
+ ▄▄▄▄   ▓█████  ██░ ██  ██▓ ███▄    █ ▓█████▄                        
+▓█████▄ ▓█   ▀ ▓██░ ██▒▓██▒ ██ ▀█   █ ▒██▀ ██▌                       
+▒██▒ ▄██▒███   ▒██▀▀██░▒██▒▓██  ▀█ ██▒░██   █▌                       
+▒██░█▀  ▒▓█  ▄ ░▓█ ░██ ░██░▓██▒  ▐▌██▒░▓█▄   ▌                       
+░▓█  ▀█▓░▒████▒░▓█▒░██▓░██░▒██░   ▓██░░▒████▓                        
+░▒▓███▀▒░░ ▒░ ░ ▒ ░░▒░▒░▓  ░ ▒░   ▒ ▒  ▒▒▓  ▒                        
+▒░▒   ░  ░ ░  ░ ▒ ░▒░ ░ ▒ ░░ ░░   ░ ▒░ ░ ▒  ▒                        
+ ░    ░    ░    ░  ░░ ░ ▒ ░   ░   ░ ░  ░ ░  ░                        
+ ░         ░  ░ ░  ░  ░ ░           ░    ░                           
+      ░                                ░                             
+                                          ▓██   ██▓ ▒█████   █    ██ 
+                                           ▒██  ██▒▒██▒  ██▒ ██  ▓██▒
+                                            ▒██ ██░▒██░  ██▒▓██  ▒██░
+                                            ░ ▐██▓░▒██   ██░▓▓█  ░██░
+                                            ░ ██▒▓░░ ████▓▒░▒▒█████▓ 
+                                             ██▒▒▒ ░ ▒░▒░▒░ ░▒▓▒ ▒ ▒ 
+                                           ▓██ ░▒░   ░ ▒ ▒░ ░░▒░ ░ ░ 
+                                           ▒ ▒ ░░  ░ ░ ░ ▒   ░░░ ░ ░ 
+                                           ░ ░         ░ ░     ░     
+                                           ░ ░                       
+                    ";
+
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(behind);
+
+                    Console.ReadKey();
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.White;
+
+
                 }
             }
 
