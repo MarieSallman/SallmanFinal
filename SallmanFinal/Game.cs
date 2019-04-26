@@ -1001,17 +1001,85 @@ namespace SallmanFinal
                     ";
 
                     Console.Clear();
-                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(behind);
 
                     Console.ReadKey();
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.White;
 
-
+                    EndGame death = new EndGame();
+                    death.Charon(Inventory);
                 }
             }
 
+            Console.WriteLine("");
+            Console.WriteLine("You decide to remain on the path, although your shaking legs scream at you to do otherwise.");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("You can see it getting closer.  It's not quite close enough to see with your flashlight,");
+            Console.WriteLine("but the sight of it still makes your blood run cold.");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("It's clearly not human, the way it moves is too erratic, frantic.");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("It seems to be larger than a normal human too, although not as large as the creature you delt with before.");
+            Console.WriteLine("");
+            Console.ReadKey();
+
+            Console.WriteLine("It almost looks like...");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("Like it's legs are on backwards?");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("The creature is getting close now.");
+            Console.ReadKey();
+            Console.WriteLine("You can almost...");
+            Console.WriteLine("");
+            Console.WriteLine("Almost see it...");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("Almost...");
+
+            string hello = @"
+ ██░ ██ ▓█████  ██▓     ██▓     ▒█████  
+▓██░ ██▒▓█   ▀ ▓██▒    ▓██▒    ▒██▒  ██▒
+▒██▀▀██░▒███   ▒██░    ▒██░    ▒██░  ██▒
+░▓█ ░██ ▒▓█  ▄ ▒██░    ▒██░    ▒██   ██░
+░▓█▒░██▓░▒████▒░██████▒░██████▒░ ████▓▒░
+ ▒ ░░▒░▒░░ ▒░ ░░ ▒░▓  ░░ ▒░▓  ░░ ▒░▒░▒░ 
+ ▒ ░▒░ ░ ░ ░  ░░ ░ ▒  ░░ ░ ▒  ░  ░ ▒ ▒░ 
+ ░  ░░ ░   ░     ░ ░     ░ ░   ░ ░ ░ ▒  
+ ░  ░  ░   ░  ░    ░  ░    ░  ░    ░ ░  
+                                        
+            ";
+
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("");
+
+            Console.WriteLine(hello);
+
+            Console.ReadKey();
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.WriteLine("");
+            Console.WriteLine("It's voice is like nails on a chalkboard.");
+            Console.WriteLine("You want to look away but you can't.");
+            Console.WriteLine("You don't think it's mouth was even moving.");
+
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You don't know what to call the thing standing just at the edge of your flashlight's beam.");
+            Console.WriteLine("It's features were clearly meant to be human, but it's...");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("Wrong.");
+
+            Console.ReadKey();
 
         }
 
