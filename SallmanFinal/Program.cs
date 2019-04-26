@@ -6,8 +6,15 @@ namespace SallmanFinal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Adventure Game");
+
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Clear();
+
+            Game.StartGame();
+            
+
             Console.ReadKey();
         }
+
     }
 }
