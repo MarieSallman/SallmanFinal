@@ -6,14 +6,19 @@ namespace SallmanFinal
 {
     public class Items
     {
-        static string[] Weapons = { "Rock", "Thick branch", "Sharp rock", "Sharp stick"};
-        static string[] Attack = { "1", "2", "3", "1" };
+        static double[] weapons = { 1, 2, 3, 4};
+        static double itemName;
+        static double itemAttack;
 
-        public static void Weapon()
+        public static double Weapon()
         {
             Random randomNumber = new Random();
 
-            int number = randomNumber.Next(Weapons.Length);
+            int number = randomNumber.Next(weapons.Length);
+
+            itemName = weapons[number];
+
+            return itemName;
         }
     }
 }

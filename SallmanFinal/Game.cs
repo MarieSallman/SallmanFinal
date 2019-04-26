@@ -670,6 +670,67 @@ namespace SallmanFinal
 
                 Console.WriteLine("");
                 Console.WriteLine("You rush over to the trees on your left, using your cellphone's flashlight to search for some kind of weapon.");
+                Console.WriteLine("");
+                Console.ReadKey();
+
+                double weapon1 = Items.Weapon();
+
+                if(weapon1 == 1)
+                {
+                    Console.WriteLine("You have acquired a large rock.");
+                    Inventory.Add("Large rock");
+
+                }
+                else if(weapon1 == 2)
+                {
+                    Console.WriteLine("You have acquired a large branch.");
+                    Inventory.Add("Large branch");
+
+                }else if(weapon1 == 3)
+                {
+                    Console.WriteLine("You have acquired a sharp stone.");
+                    Inventory.Add("Sharp stone");
+                }else if(weapon1 == 4)
+                {
+                    Console.WriteLine("You have acquired a sharp stick");
+                    Inventory.Add("Sharp stick");
+                }
+
+                Console.WriteLine("");
+                Console.ReadKey();
+                Console.WriteLine("You have equipped your new weapon.");
+                Console.ReadKey();
+
+                Console.WriteLine("");
+                Console.WriteLine("With a newfound confidence you approach the right side of the path.");
+                Console.WriteLine("");
+                Console.ReadKey();
+                Console.WriteLine("The rustling seems to have died down.");
+                Console.ReadKey();
+                Console.WriteLine("");
+                Console.WriteLine("...");
+                Console.ReadKey();
+                Console.WriteLine("");
+                Console.WriteLine("You're about to turn around when suddenly--");
+                Console.ReadKey();
+
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Red;
+
+                Monster monster2 = new Monster();
+                monster2.Flash();
+
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.White;
+
+                Console.WriteLine("");
+                Console.WriteLine("A hulking, hunched figure rushes toward you.  In a panic you drop you cellphone.");
+                Console.WriteLine("It skitters helplessly out of reach, sending your immediate surroundings in to darkness.");
+                Console.ReadKey();
+
+
+
+
 
             }
 
