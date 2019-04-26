@@ -4,14 +4,16 @@ using System.Text;
 
 namespace SallmanFinal
 {
-    /*public class Items
+    public class Items
     {
-        public string name;
-        int stats;
+        static string[] Weapons = { "Rock", "Thick branch", "Sharp rock", "Sharp stick"};
+        static string[] Attack = { "1", "2", "3", "1" };
 
-        public Items()
+        public static void Weapon()
         {
-            Random randomNumber; 
+            Random randomNumber = new Random();
+
+            int number = randomNumber.Next(Weapons.Length);
         }
-    }*/
+    }
 }

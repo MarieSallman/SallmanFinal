@@ -11,6 +11,8 @@ namespace SallmanFinal
         static int charisma = 5;
         static int luck = 5;
 
+        
+
         public void OccupationStats(int occupation) {
             if(occupation == 1)
             {
@@ -39,6 +41,137 @@ namespace SallmanFinal
             Console.WriteLine("Charisma: {0}", charisma);
             Console.WriteLine("Intelligence: {0}", intelligence);
             Console.WriteLine("Luck: {0}", luck);
+        }
+
+        public void ResetStats()
+        {
+            strength = 5;
+            intelligence = 5;
+            charisma = 5;
+            luck = 5;
+        }
+
+        public bool SkillCheck(int type, int check)
+        {
+
+            if(type == 1)
+            {
+                
+                bool intResult = IntelligenceCheck(intelligence, check);
+                if (intResult)
+                {
+                    return true;
+                }
+                else { return false; }
+            }
+            else if(type == 2)
+            {
+                
+                bool strResult = StrengthCheck(strength, check);
+                if (strResult)
+                {
+                    return true;
+                }
+                else { return false; }
+            }else if(type == 3)
+            {
+                
+                bool charResult = CharismaCheck(charisma, check);
+                if (charResult)
+                {
+                    return true;
+                }
+                else { return false; }
+            }else if(type == 4)
+            {
+                
+                bool luckResult = LuckCheck(luck, check);
+                if (luckResult)
+                {
+                    return true;
+                }
+                else { return false; }
+            }
+            return false;
+        }
+
+        private bool IntelligenceCheck(int intelligence, int check)
+        {
+            if(intelligence > check)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Intelligence check passed.");
+                Console.WriteLine("");
+                return true;
+            }else if(intelligence < check)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Intelligence check failed.");
+                Console.WriteLine("");
+                return false;
+            }
+
+            return false;
+        }
+
+        private bool StrengthCheck(int strength, int check)
+        {
+            if (strength > check)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Strength check passed.");
+                Console.WriteLine("");
+                return true;
+            }
+            else if (strength < check)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Strength check failed.");
+                Console.WriteLine("");
+                return false;
+            }
+
+            return false;
+        }
+
+        private bool CharismaCheck(int charisma, int check)
+        {
+            if (charisma > check)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Charisma check passed.");
+                Console.WriteLine("");
+                return true;
+            }
+            else if (charisma < check)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Charisma check failed.");
+                Console.WriteLine("");
+                return false;
+            }
+
+            return false;
+        }
+
+        private bool LuckCheck(int luck, int check)
+        {
+            if (luck > check)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Luck check passed.");
+                Console.WriteLine("");
+                return true;
+            }
+            else if (luck < check)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Luck check failed.");
+                Console.WriteLine("");
+                return false;
+            }
+
+            return false;
         }
     }
 }

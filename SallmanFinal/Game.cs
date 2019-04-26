@@ -64,7 +64,7 @@ namespace SallmanFinal
                     Console.ReadKey();
                     Environment.Exit(0);
                 }
-                else if (beginGame != "y" || beginGame != "n")
+                else if (beginGame != "y" && beginGame != "n")
                 {
                     Console.WriteLine("Perhaps I wasn't clear.  Please enter y for yes or n for no.");
                     beginGame = Console.ReadLine();
@@ -196,7 +196,7 @@ namespace SallmanFinal
                     Console.ReadKey();
                     viewStats = "n";
                 }
-                else if (viewStats != "y" || viewStats != "n")
+                else if (viewStats != "y" && viewStats != "n")
                 {
                     Console.WriteLine("Perhaps I wasn't clear.  Please enter y for yes or n for no.");
                     viewStats = Console.ReadLine();
@@ -377,7 +377,7 @@ namespace SallmanFinal
             {
                 if (choice1 != "b")
                 {
-                    Console.WriteLine("You have entered {0}, this is not a possible choice.  Please choose a or b.");
+                    Console.WriteLine("You have entered {0}, this is not a possible choice.  Please choose a or b.", choice1);
                     choice1 = Console.ReadLine();
                 }
                 else
@@ -458,17 +458,38 @@ namespace SallmanFinal
                     Console.ForegroundColor = ConsoleColor.Red;
 
                     string face = @"
-    ⣿⣿⣿⡉⢀⣾⣿⡟⣩⣭⣭⡈⠙⢿⣿⣿⣿⣿⣿⡿⣻⣿⣿⣿⣿⣿⣿⣿⡇⠄ 
-    ⣿⣿⡗⠄⣼⣿⣿⢸⡿⠉⠉⢻⡆⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢠⠄ 
-    ⣿⡻⠁⢠⣿⣿⣿⣦⡛⠢⠴⠛⠁⣸⣿⣿⣿⣿⡿⠛⢉⣉⣉⡙⢻⣿⣿⣗⠄⠄ 
-    ⠷⠁⠄⢰⣿⣿⣿⣷⣬⣭⣼⣷⣿⣿⣿⣿⣿⡏⢀⣾⠟⠛⢿⣿⣄⣿⣿⡏⠄⠄ 
-    ⠄⠄⠄⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠄⠳⢀⣀⡼⢟⣼⣿⡟⠄⠄⠄ 
-    ⠄⠄⠄⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣮⣒⣲⣶⣾⣿⣿⠏⠄⠄⠄⢠ 
-    ⠄⠄⠄⠸⣿⣽⣿⣿⣿⣿⣉⣿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠄⠄⠄⢠⣷ 
-    ⠄⠄⠄⠄⢻⣷⢻⣿⣿⣿⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⠏⠄⠄⠄⠄⠄⢀⣾⣿ 
-    ⠄⠄⠄⠄⠄⢻⣧⡙⢿⣿⣿⣿⣿⣿⡿⣿⣿⣿⠿⠛⠁⠄⠄⠄⠄⠄⢠⣿⣿⣿ 
-    ⠄⠄⠄⡀⠄⠈⣿⣿⣶⣭⣭⣭⣿⣾⡿⠟⠋⠁⠄⠄⠄⠄⠄⠄⠄⢠⣿⣿⣿⣿ 
-    ⠄⠄⠎⠄⠄⣨⣿⣿⣿⣿⣿⣿⠋⠁⠄⠄⠄⠄⠄⠄⠄⠄⠄⣀⡲⣿⣿⣿⣿⣿
+        ███████████████████████████████████
+        ███████████████████████████████████
+        ███████████████████████████████████
+        █████████████▒▒▒▒▒▒▒▒▒█████████████
+        █████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█████████
+        ███████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒███████
+        ██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██████
+        █████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█████
+        █████▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒█████
+        ████▒▒▒▒███▒▒▒▒▒▒▒▒▒▒▒▒▒███▒▒▒▒████
+        ███▒▒▒▒██████▒▒▒▒▒▒▒▒▒██████▒▒▒▒███
+        ███▒▒▒███▐▀███▒▒▒▒▒▒▒███▀▌███▒▒▒███
+        ███▒▒▒██▄▐▌▄███▒▒▒▒▒███▄▐▌▄██▒▒▒███
+        ███▒▒▒▒██▌███▒▒▒█▒█▒▒▒███▐██▒▒▒▒███
+        ██▒▒▒▒▒▒███▒▒▒▒██▒██▒▒▒▒███▒▒▒▒▒▒██
+        █▒▒▒▒▒▒▒▒█▒▒▒▒██▒▒▒██▒▒▒▒█▒▒▒▒▒▒▒▒█
+        █▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒▒▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒█
+        █▒▒▒▒█▒▒█▒▒▒▒██▒▒▒▒▒██▒▒▒▒█▒▒█▒▒▒▒█
+        ██▒▒▒█▒▒█▒▒▒▒█▒██▒██▒█▒▒▒▒█▒▒█▒▒▒██
+        ███▒█▒▒█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒█▒▒█▒███
+        █████▒▒█▒▒▒▐███████████▌▒▒▒█▒▒█████
+        ███████▒▒▒▐█▀██▀███▀██▀█▌▒▒▒███████
+        ███████▒▒▒▒█▐██▐███▌██▌█▒▒▒▒███████
+        ███████▒▒▒▒▒▐▒▒▐▒▒▒▌▒▒▌▒▒▒▒▒███████
+        ████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒████████
+        ████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒████████
+        █████████▒▒█▒█▒▒▒█▒▒▒█▒█▒▒█████████
+        █████████▒██▒█▒▒▒█▒▒▒█▒██▒█████████
+        ██████████████▒▒███▒▒██████████████
+        ██████████████▒█████▒██████████████
+        ███████████████████████████████████
+        ███████████████████████████████████
                     ";
                     Console.WriteLine(face);
 
@@ -477,6 +498,7 @@ namespace SallmanFinal
                     Console.WriteLine("");
                     Console.WriteLine("");
 
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("The figure is massive.");
                     Console.ReadKey();
                     Console.WriteLine("");
@@ -489,9 +511,169 @@ namespace SallmanFinal
                 }
             }
 
+            Console.WriteLine("");
+            Console.WriteLine("You decide not to ignore the ominous text.");
+            Console.ReadKey();
+
+            FirstFight();
+
 
         }
 
+        static void FirstFight()
+        {
+            string choice2;
+
+            Console.WriteLine("");
+            Console.WriteLine("You walk for what feels days, although the clock on your phone says it's only one hour.");
+            Console.WriteLine("The path in front of you seems to stretch in to infinity.");
+            Console.WriteLine("The sky above is streaked with deep blues and purples.");
+            Console.WriteLine("The trees around you feel like they're getting closer to you with each step you take.");
+            Console.WriteLine("You're starting to feel awfully claustrophobic.");
+            Console.ReadKey();
+
+            Console.WriteLine("");
+            Console.WriteLine("You use the flashlight on your cellphone to light up the path in front of you.");
+            Console.WriteLine("You're mildly worried about the battery life, but you'd rather not go walking around in the dark.");
+            Console.ReadKey();
+
+            Console.WriteLine("");
+            Console.WriteLine("You stop for a moment to catch your breath.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("Perhaps it was the first time you heard it.");
+            Console.WriteLine("Perhaps it had always been there, covered up by the sound of your footsteps.");
+            Console.ReadKey();
+
+            string rustle = @"
+                _   _                                
+ _ __ _   _ ___| |_| | ___                           
+| '__| | | / __| __| |/ _ \                          
+| |  | |_| \__ \ |_| |  __/                          
+|_|   \__,_|___/\__|_|\___|                          
+                                                     
+                             _   _                   
+              _ __ _   _ ___| |_| | ___              
+             | '__| | | / __| __| |/ _ \             
+             | |  | |_| \__ \ |_| |  __/             
+             |_|   \__,_|___/\__|_|\___|             
+                                                     
+                                          _   _      
+                           _ __ _   _ ___| |_| | ___ 
+                          | '__| | | / __| __| |/ _ \
+                          | |  | |_| \__ \ |_| |  __/
+                          |_|   \__,_|___/\__|_|\___|
+                                                     
+            ";
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            Console.Clear();
+            Console.WriteLine(rustle);
+            Console.ReadKey();
+
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.WriteLine("");
+            Console.WriteLine("There's a noise coming from the tree line directly to your right.");
+            Console.ReadKey();
+            Console.WriteLine("You feel a shiver creep up your spine as your imagination runs wild.");
+            Console.WriteLine("What could be in there?  A fox?  A bear?  Worse?");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You don't really want to find out what is making the sound,");
+            Console.WriteLine("but at the same time you feel a creeping desire to face your fears.");
+            Console.WriteLine("");
+            Console.ReadKey();
+
+            Console.WriteLine("What will you do?");
+            Console.WriteLine("");
+            Console.WriteLine("a. Investigate the sound immediately.");
+            Console.WriteLine("b. Search on the left side of the path for a weapon.");
+            Console.WriteLine("c. Continue on, ignoring the noise.");
+            Console.WriteLine("");
+
+            Stats skill1 = new Stats();
+            skill1.SkillCheck(1,6);
+
+            Console.WriteLine("");
+            Console.WriteLine("Please enter a, b, or c to continue.");
+
+            choice2 = Console.ReadLine();
+
+            while(choice2 != "b")
+            {
+                if(choice2 != "a" && choice2 != "c")
+                {
+                    Console.WriteLine("Please enter a, b, or c to continue.");
+                    choice2 = Console.ReadLine();
+                }else if(choice2 == "a")
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("You choose to investigate the sound immediately.");
+                    Console.ReadKey();
+                    Console.WriteLine("You approach the towering trees with hesitation, feeling yourself grow more apprehensive with each step.");
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("The sounds increase as you draw nearer.");
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("You lean forward at the edge of the path, the light of your flashlight is swallowed up by the dense forest.");
+                    Console.WriteLine("");
+                    Console.ReadKey();
+                    Console.WriteLine("...");
+                    Console.WriteLine("");
+                    Console.ReadKey();
+                    Console.WriteLine("...");
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("You lean in closer, straining your eyes to see something.  Anything.");
+                    Console.ReadKey();
+                    Console.WriteLine("");
+                    Console.WriteLine("...");
+                    Console.ReadKey();
+
+                    string snap = @"
+.|'''|  '||\   ||`      /.\      '||'''|, 
+||       ||\\  ||      // \\      ||   || 
+`|'''|,  || \\ ||     //...\\     ||...|' 
+ .   ||  ||  \\||    //     \\    ||      
+ |...|' .||   \||. .//       \\. .||      
+                                          
+                                          
+                    ";
+
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(snap);
+
+                    Console.ReadKey();
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("");
+
+                    Console.WriteLine("Suddenly, as if out of nowhere, a hulking figure rushes toward you.");
+                    Console.WriteLine("Illuminated by your pitiful cellphone's light, it's grotesque face is all too visible.");
+
+                    Console.ReadKey();
+                    Monster monster1 = new Monster();
+                    monster1.Flash();
+                    Console.ForegroundColor = ConsoleColor.White;
+
+                    EndGame secondend = new EndGame();
+                    secondend.Dead(Inventory);
+
+                
+
+                }
+
+                Console.WriteLine("");
+                Console.WriteLine("You rush over to the trees on your left, using your cellphone's flashlight to search for some kind of weapon.");
+
+            }
+
+        }
 
     }
 }
