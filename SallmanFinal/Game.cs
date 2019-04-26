@@ -1043,16 +1043,17 @@ namespace SallmanFinal
             Console.WriteLine("");
             Console.WriteLine("Almost...");
 
-            string hello = @"
- ██░ ██ ▓█████  ██▓     ██▓     ▒█████  
-▓██░ ██▒▓█   ▀ ▓██▒    ▓██▒    ▒██▒  ██▒
-▒██▀▀██░▒███   ▒██░    ▒██░    ▒██░  ██▒
-░▓█ ░██ ▒▓█  ▄ ▒██░    ▒██░    ▒██   ██░
-░▓█▒░██▓░▒████▒░██████▒░██████▒░ ████▓▒░
- ▒ ░░▒░▒░░ ▒░ ░░ ▒░▓  ░░ ▒░▓  ░░ ▒░▒░▒░ 
- ▒ ░▒░ ░ ░ ░  ░░ ░ ▒  ░░ ░ ▒  ░  ░ ▒ ▒░ 
- ░  ░░ ░   ░     ░ ░     ░ ░   ░ ░ ░ ▒  
- ░  ░  ░   ░  ░    ░  ░    ░  ░    ░ ░  
+            string welcome = @"
+ █     █░▓█████  ██▓     ▄████▄   ▒█████   ███▄ ▄███▓▓█████ 
+▓█░ █ ░█░▓█   ▀ ▓██▒    ▒██▀ ▀█  ▒██▒  ██▒▓██▒▀█▀ ██▒▓█   ▀ 
+▒█░ █ ░█ ▒███   ▒██░    ▒▓█    ▄ ▒██░  ██▒▓██    ▓██░▒███   
+░█░ █ ░█ ▒▓█  ▄ ▒██░    ▒▓▓▄ ▄██▒▒██   ██░▒██    ▒██ ▒▓█  ▄ 
+░░██▒██▓ ░▒████▒░██████▒▒ ▓███▀ ░░ ████▓▒░▒██▒   ░██▒░▒████▒
+░ ▓░▒ ▒  ░░ ▒░ ░░ ▒░▓  ░░ ░▒ ▒  ░░ ▒░▒░▒░ ░ ▒░   ░  ░░░ ▒░ ░
+  ▒ ░ ░   ░ ░  ░░ ░ ▒  ░  ░  ▒     ░ ▒ ▒░ ░  ░      ░ ░ ░  ░
+  ░   ░     ░     ░ ░   ░        ░ ░ ░ ▒  ░      ░      ░   
+    ░       ░  ░    ░  ░░ ░          ░ ░         ░      ░  ░
+                        ░                                   
                                         
             ";
 
@@ -1060,7 +1061,7 @@ namespace SallmanFinal
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("");
 
-            Console.WriteLine(hello);
+            Console.WriteLine(welcome);
 
             Console.ReadKey();
             Console.Clear();
@@ -1080,6 +1081,87 @@ namespace SallmanFinal
             Console.WriteLine("Wrong.");
 
             Console.ReadKey();
+
+            Console.WriteLine("");
+            Console.WriteLine("It's legs, although covered in human skin, look like they've been stretch over the skeleton of a horse's back legs.");
+            Console.WriteLine("It's arms, whittled down to the bone and jutting out of it's torso, or at least the open ribcage that once was it's torso.");
+            Console.WriteLine("It's face, twisted up toward the sky, mouth agape as though it were silently bemoaning it's very abominable existance.");
+            Console.WriteLine("What a grotesque simulacrum of the human visage.");
+            Console.ReadKey();
+
+            Console.WriteLine("");
+            Console.WriteLine("Your wretch, body heaving at the sight of the impossible, the incomprehensible.");
+            Console.ReadKey();
+            Console.WriteLine("");
+
+            Console.WriteLine("It does not move, and for that you are thankful.");
+            Console.WriteLine("But it's voice, the grating sound of a dentist's drill to the skull.");
+            Console.ReadKey();
+
+            string follow = @"
+  █████▒▒█████   ██▓     ██▓     ▒█████   █     █░    ███▄ ▄███▓▓█████ 
+▓██   ▒▒██▒  ██▒▓██▒    ▓██▒    ▒██▒  ██▒▓█░ █ ░█░   ▓██▒▀█▀ ██▒▓█   ▀ 
+▒████ ░▒██░  ██▒▒██░    ▒██░    ▒██░  ██▒▒█░ █ ░█    ▓██    ▓██░▒███   
+░▓█▒  ░▒██   ██░▒██░    ▒██░    ▒██   ██░░█░ █ ░█    ▒██    ▒██ ▒▓█  ▄ 
+░▒█░   ░ ████▓▒░░██████▒░██████▒░ ████▓▒░░░██▒██▓    ▒██▒   ░██▒░▒████▒
+ ▒ ░   ░ ▒░▒░▒░ ░ ▒░▓  ░░ ▒░▓  ░░ ▒░▒░▒░ ░ ▓░▒ ▒     ░ ▒░   ░  ░░░ ▒░ ░
+ ░       ░ ▒ ▒░ ░ ░ ▒  ░░ ░ ▒  ░  ░ ▒ ▒░   ▒ ░ ░     ░  ░      ░ ░ ░  ░
+ ░ ░   ░ ░ ░ ▒    ░ ░     ░ ░   ░ ░ ░ ▒    ░   ░     ░      ░      ░   
+           ░ ░      ░  ░    ░  ░    ░ ░      ░              ░      ░  ░
+                                                                       
+            ";
+
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(follow);
+
+            Console.ReadKey();
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("");
+            Console.WriteLine("Fear grips you as it speaks, although the abomination remains still as a statue.");
+
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You must make a choice.");
+            Console.ReadKey();
+
+            Console.WriteLine("");
+            Console.WriteLine("a. Follow");
+            Console.WriteLine("b. Follow");
+
+            Console.WriteLine("");
+            Console.WriteLine("That's...  That's funny, you could have sworn you had another choice.");
+
+            Console.ReadKey();
+
+            Console.WriteLine("");
+            Console.WriteLine("a. Follow");
+            Console.WriteLine("b. Fight");
+
+            Console.WriteLine("");
+            Console.WriteLine("Yes, that's right, you have a choice.");
+
+            Console.WriteLine("Please choose a or b.");
+            string followCharon = Console.ReadLine();
+
+
+            while(followCharon != "a")
+            {
+                if(followCharon != "b")
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Sorry, you must make a choice.");
+                    followCharon = Console.ReadLine();
+
+                }else if(followCharon == "b")
+                {
+
+                }
+            }
 
         }
 

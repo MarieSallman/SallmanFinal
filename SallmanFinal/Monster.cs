@@ -35,9 +35,9 @@ namespace SallmanFinal
             return false;
         }
 
-        public bool Attack(double weapon, double advantage)
+        public bool Attack(double weapon, double disadvantage)
         {
-            double chance = strength + weapon + advantage;
+            double chance = strength + weapon + disadvantage;
 
             if (chance >= 9)
             {
