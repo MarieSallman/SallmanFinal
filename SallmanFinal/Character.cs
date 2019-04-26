@@ -4,7 +4,8 @@ using System.Text;
 
 namespace SallmanFinal
 {
-    class Character
+    class Character : Game
     {
+
     }
 }
