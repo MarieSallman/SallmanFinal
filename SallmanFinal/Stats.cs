@@ -22,7 +22,7 @@ namespace SallmanFinal
                 strength = 8;
             }else if(occupation == 3)
             {
-                Console.WriteLine("Intellignece has increased by 3.");
+                Console.WriteLine("Intelligence has increased by 3.");
                 intelligence = 8;
             }else if(occupation == 4)
             {

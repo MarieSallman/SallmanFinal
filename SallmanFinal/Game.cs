@@ -10,6 +10,7 @@ namespace SallmanFinal
         static string beginGame;
         static int occupation;
         static string viewStats;
+        static List<string> Inventory = new List<string>();
 
         public static void StartGame()
         {
@@ -207,7 +208,8 @@ namespace SallmanFinal
             Console.WriteLine("");
             Console.WriteLine("That's right, you're starting to remember.");
             Console.ReadKey();
-            Console.WriteLine("You take a moment to observe your surroundings.  You seem to be in a car, although considering the condition it's in it's hard to even call it a car.");
+            Console.WriteLine("You take a moment to observe your surroundings.  You seem to be in a car.");
+            Console.WriteLine("Although, considering the condition it's in it's hard to even call it a car.");
             Console.ReadKey();
             Console.WriteLine("You're sitting in the driver's seat, the entirety of the passenger's side is caved in.");
             Console.WriteLine("You don't think anyone was with you in the car... You hope no one was with you in the car.");
@@ -231,7 +233,7 @@ namespace SallmanFinal
             Console.WriteLine(thunk);
             Console.ForegroundColor = ConsoleColor.White;
 
-            Console.ReadKey("");
+            Console.ReadKey();
 
             Console.Clear();
 
@@ -260,9 +262,100 @@ namespace SallmanFinal
             Console.WriteLine("There are three unread text messages however.  Two are from a contact simply called <3<3, the other is from someone named Charon.");
             Console.ReadKey();
             Console.WriteLine("");
-            Console.WriteLine("You ");
 
+            Inventory.Add("Cellphone");
 
+            Console.WriteLine("Neither name is familiar to you.  You decide to check the two texts from <3<3 first.");
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("Text 1 reads:");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            Console.WriteLine("");
+            Console.WriteLine("{0}, don't forget to call Alex, he can give you directions.", characterName);
+            Console.ReadKey();
+
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.WriteLine("");
+            Console.WriteLine("The second text reads:");
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            Console.WriteLine("");
+            Console.WriteLine("Alex said you haven't called him yet.  I know you two aren't on the best terms, but this is silly.");
+            Console.WriteLine("Please call him.");
+            Console.ReadKey();
+
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.WriteLine("");
+            Console.WriteLine("That's right.  You were supposed to call your friend Alex for directions...");
+            Console.ReadKey();
+            Console.WriteLine("Directions?");
+            Console.ReadKey();
+            Console.WriteLine("What did you need directions for?  Where were you going?");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("Your headache worsens when you try to think back.");
+            Console.WriteLine("Instead you focus your attention on the text from a contact called Charon.");
+
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("It reads:");
+
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            string follow = @"
+
+  █████▒▒█████   ██▓     ██▓     ▒█████   █     █░   ▄▄▄█████▓ ██░ ██ ▓█████                          
+▓██   ▒▒██▒  ██▒▓██▒    ▓██▒    ▒██▒  ██▒▓█░ █ ░█░   ▓  ██▒ ▓▒▓██░ ██▒▓█   ▀                          
+▒████ ░▒██░  ██▒▒██░    ▒██░    ▒██░  ██▒▒█░ █ ░█    ▒ ▓██░ ▒░▒██▀▀██░▒███                            
+░▓█▒  ░▒██   ██░▒██░    ▒██░    ▒██   ██░░█░ █ ░█    ░ ▓██▓ ░ ░▓█ ░██ ▒▓█  ▄                          
+░▒█░   ░ ████▓▒░░██████▒░██████▒░ ████▓▒░░░██▒██▓      ▒██▒ ░ ░▓█▒░██▓░▒████▒                         
+ ▒ ░   ░ ▒░▒░▒░ ░ ▒░▓  ░░ ▒░▓  ░░ ▒░▒░▒░ ░ ▓░▒ ▒       ▒ ░░    ▒ ░░▒░▒░░ ▒░ ░                         
+ ░       ░ ▒ ▒░ ░ ░ ▒  ░░ ░ ▒  ░  ░ ▒ ▒░   ▒ ░ ░         ░     ▒ ░▒░ ░ ░ ░  ░                         
+ ░ ░   ░ ░ ░ ▒    ░ ░     ░ ░   ░ ░ ░ ▒    ░   ░       ░       ░  ░░ ░   ░                            
+           ░ ░      ░  ░    ░  ░    ░ ░      ░                 ░  ░  ░   ░  ░                         
+                                                                                                      
+           ██████ ▓█████▄▄▄█████▓▄▄▄█████▓ ██▓ ███▄    █   ▄████      ██████  █    ██  ███▄    █      
+         ▒██    ▒ ▓█   ▀▓  ██▒ ▓▒▓  ██▒ ▓▒▓██▒ ██ ▀█   █  ██▒ ▀█▒   ▒██    ▒  ██  ▓██▒ ██ ▀█   █      
+         ░ ▓██▄   ▒███  ▒ ▓██░ ▒░▒ ▓██░ ▒░▒██▒▓██  ▀█ ██▒▒██░▄▄▄░   ░ ▓██▄   ▓██  ▒██░▓██  ▀█ ██▒     
+           ▒   ██▒▒▓█  ▄░ ▓██▓ ░ ░ ▓██▓ ░ ░██░▓██▒  ▐▌██▒░▓█  ██▓     ▒   ██▒▓▓█  ░██░▓██▒  ▐▌██▒     
+         ▒██████▒▒░▒████▒ ▒██▒ ░   ▒██▒ ░ ░██░▒██░   ▓██░░▒▓███▀▒   ▒██████▒▒▒▒█████▓ ▒██░   ▓██░ ██▓ 
+         ▒ ▒▓▒ ▒ ░░░ ▒░ ░ ▒ ░░     ▒ ░░   ░▓  ░ ▒░   ▒ ▒  ░▒   ▒    ▒ ▒▓▒ ▒ ░░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒  ▒▓▒ 
+         ░ ░▒  ░ ░ ░ ░  ░   ░        ░     ▒ ░░ ░░   ░ ▒░  ░   ░    ░ ░▒  ░ ░░░▒░ ░ ░ ░ ░░   ░ ▒░ ░▒  
+         ░  ░  ░     ░    ░        ░       ▒ ░   ░   ░ ░ ░ ░   ░    ░  ░  ░   ░░░ ░ ░    ░   ░ ░  ░   
+               ░     ░  ░                  ░           ░       ░          ░     ░              ░   ░  
+                                                                                                   ░  
+            ";
+
+            Console.WriteLine(follow);
+
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("");
+            Console.WriteLine("Thats...");
+            Console.ReadKey();
+            Console.WriteLine("Weird.");
+            Console.ReadKey();
+
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("You look up at the sky again.");
+            Console.WriteLine("It seems like the direction of the setting sun seems to line up with the direction of the road you were originally traveling.");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("You look back at the way you supposedly came from, then back down the road toward where you were headed.");
+            Console.WriteLine("Your car is completely destroyed, you have no signal.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You'll have to make a choice.");
+            Console.ReadKey();
         }
 
 
