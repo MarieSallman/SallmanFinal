@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SallmanFinal
 {
-    class Game
+    abstract class Game
     {
         static string characterName = "Unknown Player";
         static string beginGame;
@@ -58,7 +58,7 @@ namespace SallmanFinal
 
             while (beginGame != "y")
             {
-                
+
                 if (beginGame == "n")
                 {
                     Console.WriteLine("I see.  That is a shame.  Perhaps you were not meant to travel the path.");
@@ -145,7 +145,7 @@ namespace SallmanFinal
             Console.WriteLine("The ringing in your ears is disorienting as you slowly come to.");
             Console.ReadKey();
 
-            
+
             Console.WriteLine("What just happened?");
             Console.ReadKey();
             Console.WriteLine("You try to think back to what you were just doing but a searing pain shoots through your head.");
@@ -168,7 +168,7 @@ namespace SallmanFinal
             string input = Console.ReadLine();
             Int32.TryParse(input, out occupation);
 
-            while(occupation != 1 && occupation != 2 && occupation != 3 && occupation != 4)
+            while (occupation != 1 && occupation != 2 && occupation != 3 && occupation != 4)
             {
                 Console.WriteLine("You have entered {0}.  This is not a valid entry, please enter a number 1 through 4.", occupation);
                 input = Console.ReadLine();
@@ -523,7 +523,7 @@ namespace SallmanFinal
 
         static void FirstFight()
         {
-            
+
 
             Console.WriteLine("");
             Console.WriteLine("You walk for what feels like days, although the clock on your phone says it's only one hour.");
@@ -596,7 +596,7 @@ namespace SallmanFinal
             Console.WriteLine("");
 
             Stats skill1 = new Stats();
-            bool skill2 = skill1.SkillCheck(1,6);
+            bool skill2 = skill1.SkillCheck(1, 6);
 
             if (skill2 == true)
             {
@@ -604,15 +604,15 @@ namespace SallmanFinal
             }
 
             Console.WriteLine("");
-            Console.WriteLine("Please enter a, b, or c to continue.");
+            Console.WriteLine("Please enter a or b to continue.");
 
             string choice2 = Console.ReadLine();
 
             while (choice2 != "b")
             {
-                if (choice2 != "a" && choice2 != "c")
+                if (choice2 != "a")
                 {
-                    Console.WriteLine("Please enter a, b, or c to continue.");
+                    Console.WriteLine("Please enter a or b to continue.");
                     choice2 = Console.ReadLine();
                 }
                 else if (choice2 == "a")
@@ -674,243 +674,239 @@ namespace SallmanFinal
 
 
                 }
-                else if (choice2 == "c")
-                {
-                    Console.WriteLine("None");
-                }
             }
-                Console.WriteLine("");
-                Console.WriteLine("You rush over to the trees on your left, using your cellphone's flashlight to search for some kind of weapon.");
-                Console.WriteLine("");
-                Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You rush over to the trees on your left, using your cellphone's flashlight to search for some kind of weapon.");
+            Console.WriteLine("");
+            Console.ReadKey();
 
-                double weapon1 = Items.Weapon();
-                weapon2 = weapon1;
+            double weapon1 = Items.Weapon();
+            weapon2 = weapon1;
 
-                if(weapon1 == 1)
-                {
-                    Console.WriteLine("You have acquired a large rock.");
-                    Inventory.Add("Large rock");
-
-                }
-                else if(weapon1 == 2)
-                {
-                    Console.WriteLine("You have acquired a large branch.");
-                    Inventory.Add("Large branch");
-
-                }else if(weapon1 == 3)
-                {
-                    Console.WriteLine("You have acquired a sharp stone.");
-                    Inventory.Add("Sharp stone");
-                }else if(weapon1 == 4)
-                {
-                    Console.WriteLine("You have acquired a sharp stick");
-                    Inventory.Add("Sharp stick");
-                }
-
-                Console.WriteLine("");
-                Console.ReadKey();
-                Console.WriteLine("Would you like to equip your new weapon?  Enter y for yes, n for no.");
-                string equip = Console.ReadLine();
-
-                while(equip != "y" && equip != "n")
-                {
-                    Console.WriteLine("");
-                    Console.WriteLine("Please enter y for yes, n for no.");
-                    equip = Console.ReadLine();
-                }
-
-                if(equip == "y")
-                {
-                    Console.WriteLine("");
-                    Console.WriteLine("Weapon equiped.");
-                }else if(equip == "n")
-                {
-                    Console.WriteLine("");
-                    Console.WriteLine("Weapon was not equipped, added to inventory instead.");
-                }
-                Console.ReadKey();
-
-                Console.WriteLine("");
-                Console.WriteLine("With a newfound confidence you approach the right side of the path.");
-                Console.WriteLine("");
-                Console.ReadKey();
-                Console.WriteLine("The rustling seems to have died down.");
-                Console.ReadKey();
-                Console.WriteLine("");
-                Console.WriteLine("...");
-                Console.ReadKey();
-                Console.WriteLine("");
-                Console.WriteLine("You're about to turn around when suddenly--");
-                Console.ReadKey();
-
-                Console.Clear();
-                Console.ForegroundColor = ConsoleColor.Red;
-
-                Monster monster2 = new Monster();
-                monster2.Flash();
-
-                Console.Clear();
-                Console.ForegroundColor = ConsoleColor.White;
-
-                Console.WriteLine("");
-                Console.WriteLine("A hulking, hunched figure rushes toward you.  In a panic you drop your cellphone.");
-                Console.WriteLine("It skitters helplessly out of reach, sending your immediate surroundings in to darkness.");
-                Console.ReadKey();
-
-                Console.WriteLine("");
-                Console.WriteLine("All is silent.  You steady yourself, ready to attack should the monster move again.");
-                Console.ReadKey();
-                Console.WriteLine("");
-                Console.WriteLine("...");
-                Console.ReadKey();
-                Console.WriteLine("");
-                Console.WriteLine("...");
-                Console.ReadKey();
-                Console.WriteLine("");
-                Console.WriteLine("...");
-
-                Console.ReadKey();
-
-                Console.Clear();
-                Console.WriteLine("");
-                Console.WriteLine("THERE!");
-                Console.ReadKey();
-
-                Console.WriteLine("");
-                
-                if(equip == "y")
-                {
-                    if(weapon1 == 1)
-                    {
-                        Console.WriteLine("You hurl the large rock at the beast as hard as you can, praying your throw connects.");
-
-                        Monster monsterattack = new Monster();
-                        bool attackAnswer = monsterattack.Attack(weapon1);
-                        if (attackAnswer)
-                        {
-                            Console.WriteLine("Your aim was true.  The beast screeches in pain and retreats for the time being.");
-                        }
-                        else
-                        {
-                            EndGame monsterDeath = new EndGame();
-                            monsterDeath.Dead(Inventory);
-                        }
-
-                    }
-                    else if(weapon1 == 2)
-                    {
-                        Console.WriteLine("Putting all your force behind your attack, you swing your large branch like a baseball bat.");
-
-                        Monster monsterattack = new Monster();
-                        bool attackAnswer = monsterattack.Attack(weapon1);
-                        if (attackAnswer)
-                        {
-                            Console.WriteLine("Your aim was true.  The beast screeches in pain and retreats for the time being.");
-                        }
-                        else
-                        {
-                            EndGame monsterDeath = new EndGame();
-                            monsterDeath.Dead(Inventory);
-                        }
-
-                    }
-                    else if(weapon1 == 3)
-                    {
-                        Console.WriteLine("Wielding the sharp stone like a knife you slash forward, hoping to cut deep in the beast.");
-
-                        Monster monsterattack = new Monster();
-                        bool attackAnswer = monsterattack.Attack(weapon1);
-                        if (attackAnswer)
-                        {
-                            Console.WriteLine("Your aim was true.  The beast screeches in pain and retreats for the time being.");
-                        }
-                        else
-                        {
-                            EndGame monsterDeath = new EndGame();
-                            monsterDeath.Dead(Inventory);
-                        }
-
-                    }
-                    else if(weapon1 == 4)
-                    {
-                        Console.WriteLine("Using your sharp stick you lunge forward, hoping to spear the creature through.");
-
-                        Monster monsterattack = new Monster();
-                        bool attackAnswer = monsterattack.Attack(weapon1);
-                        if (attackAnswer)
-                        {
-                            Console.WriteLine("Your aim was true.  The beast screeches in pain and retreats for the time being.");
-                        }
-                        else
-                        {
-                            EndGame monsterDeath = new EndGame();
-                            monsterDeath.Dead(Inventory);
-                        }
-
-                    }
-                }else if(equip == "n"){
-                    Monster attack = new Monster();
-                    attack.Attack();
-
-                    EndGame ending = new EndGame();
-                    ending.Dead(Inventory);
-                }
-
-                Console.ReadKey();
-                Console.Clear();
-                Console.WriteLine("");
-
-                
-                Console.WriteLine("Breathing heavily you fumble for your cellphone.");
-                Console.WriteLine("Thankfully it doesn't seem to be damaged, but the battery does read 42%.");
-                Console.WriteLine("You have to find a way back to civilization.  Fast.");
-                Console.WriteLine("Whatever that thing was you're sure it's not going to stay away forever.");
-
-                Console.ReadKey();
-
-                Console.WriteLine("");
-                Console.WriteLine("You resume walking at a significantly faster pace than before.");
-                Console.WriteLine("You don't know how long you'll be able to keep this pace up,");
-                Console.WriteLine("but you have a feeling you got lucky when you hit the beast.");
-                Console.WriteLine("You'd rather not try your luck again.");
-
-                Console.ReadKey();
-
-                Console.Clear();
-                Console.WriteLine("");
-                Console.WriteLine("You don't have to walk for long before you are stopped in your tracks.");
-                Console.ReadKey();
-
-                Console.WriteLine("In the distance you see something.  It's almost too dark to make out,");
-                Console.WriteLine("but in the faint moonlight you can make out a small silhouette.");
-                Console.ReadKey();
-
-                Console.WriteLine("");
-                Console.WriteLine("...");
-
-                Console.ReadKey();
-                Console.WriteLine("You strain your eyes, trying to determine if the figure is the creature you attacked before.");
-                Console.ReadKey();
-                Console.WriteLine("It seems to be... Growing?");
-                Console.ReadKey();
-                Console.WriteLine("No, that's not right.");
-                Console.ReadKey();
-                Console.WriteLine("");
-                Console.WriteLine("It's...");
-                Console.ReadKey();
-
-                Console.WriteLine("");
-                Console.WriteLine("It's... Coming closer...");
-
-                Console.ReadKey();
-                Console.WriteLine("It's coming closer so fast.  It must.... It must be running!");
-                Console.ReadKey();
-
-
-                Charon();
+            if (weapon1 == 1)
+            {
+                Console.WriteLine("You have acquired a large rock.");
+                Inventory.Add("Large rock");
 
             }
+            else if (weapon1 == 2)
+            {
+                Console.WriteLine("You have acquired a large branch.");
+                Inventory.Add("Large branch");
+
+            } else if (weapon1 == 3)
+            {
+                Console.WriteLine("You have acquired a sharp stone.");
+                Inventory.Add("Sharp stone");
+            } else if (weapon1 == 4)
+            {
+                Console.WriteLine("You have acquired a sharp stick");
+                Inventory.Add("Sharp stick");
+            }
+
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("Would you like to equip your new weapon?  Enter y for yes, n for no.");
+            string equip = Console.ReadLine();
+
+            while (equip != "y" && equip != "n")
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Please enter y for yes, n for no.");
+                equip = Console.ReadLine();
+            }
+
+            if (equip == "y")
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Weapon equipped.");
+            } else if (equip == "n")
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Weapon was not equipped, added to inventory instead.");
+            }
+            Console.ReadKey();
+
+            Console.WriteLine("");
+            Console.WriteLine("With a newfound confidence you approach the right side of the path.");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("The rustling seems to have died down.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You're about to turn around when suddenly--");
+            Console.ReadKey();
+
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            Monster monster2 = new Monster();
+            monster2.Flash();
+
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.WriteLine("");
+            Console.WriteLine("A hulking, hunched figure rushes toward you.  In a panic you drop your cellphone.");
+            Console.WriteLine("It skitters helplessly out of reach, sending your immediate surroundings in to darkness.");
+            Console.ReadKey();
+
+            Console.WriteLine("");
+            Console.WriteLine("All is silent.  You steady yourself, ready to attack should the monster move again.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("...");
+
+            Console.ReadKey();
+
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("THERE!");
+            Console.ReadKey();
+
+            Console.WriteLine("");
+
+            if (equip == "y")
+            {
+                if (weapon1 == 1)
+                {
+                    Console.WriteLine("You hurl the large rock at the beast as hard as you can, praying your throw connects.");
+
+                    Monster monsterattack = new Monster();
+                    bool attackAnswer = monsterattack.Attack(weapon1);
+                    if (attackAnswer)
+                    {
+                        Console.WriteLine("Your aim was true.  The beast screeches in pain and retreats for the time being.");
+                    }
+                    else
+                    {
+                        EndGame monsterDeath = new EndGame();
+                        monsterDeath.Dead(Inventory);
+                    }
+
+                }
+                else if (weapon1 == 2)
+                {
+                    Console.WriteLine("Putting all your force behind your attack, you swing your large branch like a baseball bat.");
+
+                    Monster monsterattack = new Monster();
+                    bool attackAnswer = monsterattack.Attack(weapon1);
+                    if (attackAnswer)
+                    {
+                        Console.WriteLine("Your aim was true.  The beast screeches in pain and retreats for the time being.");
+                    }
+                    else
+                    {
+                        EndGame monsterDeath = new EndGame();
+                        monsterDeath.Dead(Inventory);
+                    }
+
+                }
+                else if (weapon1 == 3)
+                {
+                    Console.WriteLine("Wielding the sharp stone like a knife you slash forward, hoping to cut deep in the beast.");
+
+                    Monster monsterattack = new Monster();
+                    bool attackAnswer = monsterattack.Attack(weapon1);
+                    if (attackAnswer)
+                    {
+                        Console.WriteLine("Your aim was true.  The beast screeches in pain and retreats for the time being.");
+                    }
+                    else
+                    {
+                        EndGame monsterDeath = new EndGame();
+                        monsterDeath.Dead(Inventory);
+                    }
+
+                }
+                else if (weapon1 == 4)
+                {
+                    Console.WriteLine("Using your sharp stick you lunge forward, hoping to spear the creature through.");
+
+                    Monster monsterattack = new Monster();
+                    bool attackAnswer = monsterattack.Attack(weapon1);
+                    if (attackAnswer)
+                    {
+                        Console.WriteLine("Your aim was true.  The beast screeches in pain and retreats for the time being.");
+                    }
+                    else
+                    {
+                        EndGame monsterDeath = new EndGame();
+                        monsterDeath.Dead(Inventory);
+                    }
+
+                }
+            } else if (equip == "n") {
+                Monster attack = new Monster();
+                attack.Attack();
+
+                EndGame ending = new EndGame();
+                ending.Dead(Inventory);
+            }
+
+            Console.ReadKey();
+            Console.Clear();
+            Console.WriteLine("");
+
+
+            Console.WriteLine("Breathing heavily you fumble for your cellphone.");
+            Console.WriteLine("Thankfully it doesn't seem to be damaged, but the battery does read 42%.");
+            Console.WriteLine("You have to find a way back to civilization.  Fast.");
+            Console.WriteLine("Whatever that thing was you're sure it's not going to stay away forever.");
+
+            Console.ReadKey();
+
+            Console.WriteLine("");
+            Console.WriteLine("You resume walking at a significantly faster pace than before.");
+            Console.WriteLine("You don't know how long you'll be able to keep this pace up,");
+            Console.WriteLine("but you have a feeling you got lucky when you hit the beast.");
+            Console.WriteLine("You'd rather not try your luck again.");
+
+            Console.ReadKey();
+
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("You don't have to walk for long before you are stopped in your tracks.");
+            Console.ReadKey();
+
+            Console.WriteLine("In the distance you see something.  It's almost too dark to make out,");
+            Console.WriteLine("but in the faint moonlight you can make out a small silhouette.");
+            Console.ReadKey();
+
+            Console.WriteLine("");
+            Console.WriteLine("...");
+
+            Console.ReadKey();
+            Console.WriteLine("You strain your eyes, trying to determine if the figure is the creature you attacked before.");
+            Console.ReadKey();
+            Console.WriteLine("It seems to be... Growing?");
+            Console.ReadKey();
+            Console.WriteLine("No, that's not right.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("It's...");
+            Console.ReadKey();
+
+            Console.WriteLine("");
+            Console.WriteLine("It's... Coming closer...");
+
+            Console.ReadKey();
+            Console.WriteLine("It's coming closer so fast.  It must.... It must be running!");
+            Console.ReadKey();
+
+
+            Charon();
+
+        }
 
         static void Charon()
         {
@@ -1028,7 +1024,7 @@ namespace SallmanFinal
             Console.WriteLine("It's clearly not human, the way it moves is too erratic, frantic.");
             Console.WriteLine("");
             Console.ReadKey();
-            Console.WriteLine("It seems to be larger than a normal human too, although not as large as the creature you delt with before.");
+            Console.WriteLine("It seems to be larger than a normal human too, although not as large as the creature you dealt with before.");
             Console.WriteLine("");
             Console.ReadKey();
 
@@ -1094,7 +1090,7 @@ namespace SallmanFinal
             Console.ReadKey();
 
             Console.WriteLine("");
-            Console.WriteLine("Your wretch, body heaving at the sight of the impossible, the incomprehensible.");
+            Console.WriteLine("You wretch, body heaving at the sight of the impossible, the incomprehensible.");
             Console.ReadKey();
             Console.WriteLine("");
 
@@ -1180,10 +1176,126 @@ namespace SallmanFinal
                         Console.WriteLine("");
                         Console.WriteLine("You step over the twitching corpse gingerly, making sure not to let it's vibrant green blood touch you.");
                         Console.ReadKey();
+
+                        CharonDead();
                     }
                 }
             }
 
+            Console.WriteLine("");
+            Console.WriteLine("Did you really have a choice?");
+            Console.WriteLine("You follow.");
+            Console.ReadKey();
+
+            CharonAlive();
+
+        }
+
+        static void CharonDead()
+        {
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("Running on the high of the kill you resume your trek down the road.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("You walk.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("And walk.");
+            Console.ReadKey();
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("And walk.");
+            Console.ReadKey();
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("You walk until your feet are sore and blistered.");
+            Console.ReadKey();
+            Console.WriteLine("You glance at your phone.  3%.  Soon everything will be dark.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            
+            Console.WriteLine("Still, you press on.  There isn't much else you can do.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            
+            Console.WriteLine("A path that never ends; it never twists, it never turns.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            
+            Console.WriteLine("Maybe it was never meant to end.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            
+            Console.WriteLine("Maybe you were suppose to walk on forever.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            
+            Console.WriteLine("...");
+            Console.ReadKey();
+            Console.WriteLine("Maybe...");
+            Console.ReadKey();
+            Console.WriteLine("");
+            
+            Console.WriteLine("Maybe it is time to stop.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            
+            Console.WriteLine("Yes, while the choice is still yours.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            
+            Console.WriteLine("Would you like to stop?");
+            Console.ReadKey();
+            Console.WriteLine("a. Yes.");
+
+            string finalchoice = Console.ReadLine();
+
+            while (finalchoice != "y")
+            {
+                
+                    Console.WriteLine("");
+                    Console.WriteLine("You really should stop.");
+                    Console.WriteLine("a. Yes.");
+                
+            }
+
+            string stop = @"
+  ██████ ▄▄▄█████▓ ▒█████   ██▓███  
+▒██    ▒ ▓  ██▒ ▓▒▒██▒  ██▒▓██░  ██▒
+░ ▓██▄   ▒ ▓██░ ▒░▒██░  ██▒▓██░ ██▓▒
+  ▒   ██▒░ ▓██▓ ░ ▒██   ██░▒██▄█▓▒ ▒
+▒██████▒▒  ▒██▒ ░ ░ ████▓▒░▒██▒ ░  ░
+▒ ▒▓▒ ▒ ░  ▒ ░░   ░ ▒░▒░▒░ ▒▓▒░ ░  ░
+░ ░▒  ░ ░    ░      ░ ▒ ▒░ ░▒ ░     
+░  ░  ░    ░      ░ ░ ░ ▒  ░░       
+      ░               ░ ░           
+                                    
+            ";
+
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(stop);
+
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
+
+            EndGame badEnd = new EndGame();
+            badEnd.BadEnd(Inventory);
+        }
+
+        static void CharonAlive()
+        {
+            
         }
 
     }

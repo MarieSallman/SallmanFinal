@@ -4,11 +4,13 @@ using System.Text;
 
 namespace SallmanFinal
 {
-    public class Items
+    internal class Items: Game
     {
         private static double[] weapons = { 1, 2, 3, 4};
         private static double itemName;
         private static double itemAttack;
+
+        
 
         public static double Weapon()
         {
