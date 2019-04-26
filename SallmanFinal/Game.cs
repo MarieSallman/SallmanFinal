@@ -698,7 +698,25 @@ namespace SallmanFinal
 
                 Console.WriteLine("");
                 Console.ReadKey();
-                Console.WriteLine("You have equipped your new weapon.");
+                Console.WriteLine("Would you like to equip your new weapon?  Enter y for yes, n for no.");
+                string equip = Console.ReadLine();
+
+                while(equip != "y" && equip != "n")
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Please enter y for yes, n for no.");
+                    equip = Console.ReadLine();
+                }
+
+                if(equip == "y")
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Weapon equiped.");
+                }else if(equip == "n")
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Weapon was not equipped, added to inventory instead.");
+                }
                 Console.ReadKey();
 
                 Console.WriteLine("");
@@ -727,6 +745,50 @@ namespace SallmanFinal
                 Console.WriteLine("A hulking, hunched figure rushes toward you.  In a panic you drop you cellphone.");
                 Console.WriteLine("It skitters helplessly out of reach, sending your immediate surroundings in to darkness.");
                 Console.ReadKey();
+
+                Console.WriteLine("");
+                Console.WriteLine("All is silent.  You steady yourself, ready to attack should the monster move again.");
+                Console.ReadKey();
+                Console.WriteLine("");
+                Console.WriteLine("...");
+                Console.ReadKey();
+                Console.WriteLine("");
+                Console.WriteLine("...");
+                Console.ReadKey();
+                Console.WriteLine("");
+                Console.WriteLine("...");
+
+                Console.ReadKey();
+
+                Console.Clear();
+                Console.WriteLine("");
+                Console.WriteLine("THERE!");
+                Console.ReadKey();
+
+                Console.WriteLine("");
+                
+                if(equip == "y")
+                {
+                    if(weapon1 == 1)
+                    {
+                        
+                    }else if(weapon1 == 2)
+                    {
+
+                    }else if(weapon1 == 3)
+                    {
+
+                    }else if(weapon1 == 4)
+                    {
+
+                    }
+                }else if(equip == n){
+                    Monster attack = new Monster();
+                    attack.Attack();
+
+                    EndGame ending = new EndGame();
+                    ending.Dead(Inventory);
+                }
 
 
 

@@ -8,9 +8,14 @@ namespace SallmanFinal
     {
 
 
-        /*public void Attack()
+        public void Attack()
         {
+            Console.WriteLine("Your feeble attempts to attack the creature with your bare fists are laughable at best.");
+            Console.WriteLine("");
+            Console.ReadKey();
 
+
+         
         }
         
 
@@ -22,7 +27,7 @@ namespace SallmanFinal
         public void Attack(weapon, advantage)
         {
 
-        }*/
+        }
 
         public void Flash()
         {
