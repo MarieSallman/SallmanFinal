@@ -6,6 +6,8 @@ namespace SallmanFinal
 {
     abstract class Game
     {
+
+       
         static string characterName = "Unknown Player";
         static string beginGame;
         static int occupation;
@@ -13,6 +15,8 @@ namespace SallmanFinal
         static List<string> Inventory = new List<string>();
         static double weapon2;
 
+
+        //Beginning of the game, character name is picked
         public static void StartGame()
         {
             string title = @"
@@ -46,6 +50,8 @@ namespace SallmanFinal
 
         }
 
+
+        //Character name is picked and story begins.
         static void NameCharacter()
         {
             Console.WriteLine("Please enter your name: ");
@@ -77,6 +83,8 @@ namespace SallmanFinal
             FirstCycle();
         }
 
+
+        //Character picks a background and is able to view stats
         static void FirstCycle()
         {
             string bang = @"
@@ -361,6 +369,7 @@ namespace SallmanFinal
             FirstChoice();
         }
 
+        //Character is given their first choice that will lead to a game over.
         static void FirstChoice()
         {
             string choice1 = "";
@@ -521,6 +530,7 @@ namespace SallmanFinal
 
         }
 
+        //Character can find and equip a random weapon, as well as fight a creature.
         static void FirstFight()
         {
 
@@ -683,6 +693,8 @@ namespace SallmanFinal
             double weapon1 = Items.Weapon();
             weapon2 = weapon1;
 
+
+            //Random weapon
             if (weapon1 == 1)
             {
                 Console.WriteLine("You have acquired a large rock.");
@@ -908,6 +920,8 @@ namespace SallmanFinal
 
         }
 
+
+        //Character is introduced to Charon, possible game over
         static void Charon()
         {
             Console.WriteLine("");
@@ -1191,6 +1205,7 @@ namespace SallmanFinal
 
         }
 
+        //Used when a bad ending is achieved, requires character to kill Charon.
         static void CharonDead()
         {
             Console.Clear();
@@ -1293,6 +1308,7 @@ namespace SallmanFinal
             badEnd.BadEnd(Inventory);
         }
 
+        //Can lead to good ending, character must pass a luck test.
         static void CharonAlive()
         {
             Random randomNumber = new Random();
@@ -1408,7 +1424,7 @@ namespace SallmanFinal
                 Console.WriteLine("Hurry, enter a for red, b for gold.");
             }
 
-
+            //Luck test to determine character's ending
             Stats skillLuck = new Stats();
             bool luck = skillLuck.SkillCheck(3, test);
 
@@ -1424,6 +1440,8 @@ namespace SallmanFinal
                     Console.WriteLine("");
                     Console.WriteLine("It's red!  Just like you guessed.");
                     Console.ReadKey();
+                    GoodEnd();
+                    
                 }
                 else if (toss == "b")
                 {
@@ -1435,6 +1453,7 @@ namespace SallmanFinal
                     Console.WriteLine("");
                     Console.WriteLine("It's gold!  Just like you guessed.");
                     Console.ReadKey();
+                    GoodEnd();
                 }
             }
 
@@ -1477,6 +1496,75 @@ namespace SallmanFinal
                 failed1.Dead(Inventory);
             }
             
+
+        }
+
+
+        //Best ending of the game, used if character passes the coin toss luck check.
+        static void GoodEnd()
+        {
+            Console.Clear();
+            Console.WriteLine("");
+            Console.WriteLine("Your eyes shift back up to the creature, unsure if you made the right choice in tossing the coin.");
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("Its' expression remains unchanged, mouth still agape.");
+            Console.WriteLine("Nevertheless, you feel somehow more at ease.  At least you choice did not anger the beast.");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("Not knowing what else to do you bend to pick the coin back up.");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("A low moan escapes the creature's maw, freezing you in place.");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("Frozen in a half crouch you feel even more vulnerable than you did before, and you quickly");
+            Console.WriteLine("straighten yourself in anticipation.");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("Without warning the beast jerks a bony arm toward the coin.");
+            Console.WriteLine("Still unsure, but not wanting to incur the wrath of this abomination, you quickly snatch up the coin.");
+
+            Console.ReadKey();
+            Console.WriteLine("");
+            Console.WriteLine("Seemingly satisfied, the creature swings its arm to point toward the left side of the path.");
+            Console.ReadKey();
+
+            Console.WriteLine("");
+            Console.WriteLine("You hesitantly swing your light to illuminate where it points, still wary of the beast.");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("...");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("Is that...");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("A path?");
+            Console.ReadKey();
+
+            Console.WriteLine("");
+            Console.WriteLine("You swing your flashlight back only to find the creature missing, gone without a trace.");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("...");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("Yes, now you see.");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("...");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("You follow the path.");
+            Console.ReadKey();
+
+            EndGame win = new EndGame();
+            win.GoodEnd(Inventory);
 
         }
 

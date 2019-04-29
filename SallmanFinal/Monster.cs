@@ -7,7 +7,7 @@ namespace SallmanFinal
     class Monster: Stats
     {
 
-
+        //Method used when player attempts to fight unarmed.
         public void Attack()
         {
             Console.WriteLine("Your feeble attempts to attack the creature with your bare fists are laughable at best.");
@@ -18,7 +18,7 @@ namespace SallmanFinal
          
         }
         
-
+        //Attack method used when player has a weapon equipped.
         public bool Attack(double weapon)
         {
             double chance = strength + weapon;
@@ -35,6 +35,7 @@ namespace SallmanFinal
             return false;
         }
 
+        //Again overrides the previous attack method by taking in more parameters, used when player attacks with a weapon but is at a disadvantage.
         public bool Attack(double weapon, double disadvantage)
         {
             double chance = strength + weapon - disadvantage;
@@ -51,6 +52,8 @@ namespace SallmanFinal
             return false;
         }
 
+
+        //Method to simulate a flashing monster image.
         public void Flash()
         {
             string creature = @"

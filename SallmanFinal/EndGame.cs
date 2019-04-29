@@ -6,7 +6,9 @@ namespace SallmanFinal
 {
     class EndGame: Game
     {
+        //All possible endings are stored here
 
+            //Normal death scenario
         public void Dead(List<string> Inventory)
         {
             string again; 
@@ -79,6 +81,8 @@ namespace SallmanFinal
 
         }
 
+
+        //Bad ending, if the player character gets unlucky
         public void BadEnd(List<string> Inventory)
         {
             string again;
@@ -152,6 +156,8 @@ namespace SallmanFinal
 
         }
 
+
+        //Specific ending for Charon being killed
         public void Charon(List<string> Inventory)
         {
             string again;
@@ -224,7 +230,7 @@ namespace SallmanFinal
 
         }
 
-
+        //Best ending of the game.
         public void GoodEnd(List<string> Inventory)
         {
             string again;
@@ -263,7 +269,7 @@ namespace SallmanFinal
             Console.WriteLine("");
             Console.WriteLine("You are dead.  You were always dead.  There was never any other outcome.");
             Console.WriteLine("Charon was able to help your soul cross over to the world of the dead.");
-            Console.WriteLine("You suppose this you best case scenario.");
+            Console.WriteLine("You suppose this is the most you could have hoped for.");
             Console.WriteLine("");
             Console.WriteLine("Congratulations, you have reached the best ending.");
             Console.WriteLine("Here are the items you found on your journey:");

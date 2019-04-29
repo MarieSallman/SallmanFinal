@@ -6,12 +6,14 @@ namespace SallmanFinal
 {
     class Stats : Game
     {
+
+        //Possible character stats, base level 5.
         public static int strength = 5;
         public static int intelligence = 5;
         public static int luck = 5;
 
         
-
+        //Used to get character background and change the base stats.
         public void OccupationStats(int occupation) {
             if(occupation == 1)
             {
@@ -34,6 +36,7 @@ namespace SallmanFinal
             }
         }
 
+        //Allows player to view their stats after picking their background.
         public void ViewStats()
         {
             Console.WriteLine("Strength: {0}", strength);
@@ -41,6 +44,8 @@ namespace SallmanFinal
             Console.WriteLine("Intelligence: {0}", intelligence);
         }
 
+
+        //Used at a game over, allows for stats to be reset if the player wants to start a new game.
         public void ResetStats()
         {
             strength = 5;
@@ -48,6 +53,8 @@ namespace SallmanFinal
             luck = 5;
         }
 
+
+        //The public method for skill checks, returns true if check is passed.
         public bool SkillCheck(int type, int check)
         {
 
@@ -83,6 +90,7 @@ namespace SallmanFinal
             return false;
         }
 
+        //Private method for Intelligence checks
         private bool IntelligenceCheck(int intelligence, int check)
         {
             if(intelligence > check)
@@ -102,6 +110,8 @@ namespace SallmanFinal
             return false;
         }
 
+
+        //Private method for strength checks
         private bool StrengthCheck(int strength, int check)
         {
             if (strength > check)
@@ -122,6 +132,8 @@ namespace SallmanFinal
             return false;
         }
 
+
+        //Private method for luck checks
         private bool LuckCheck(int luck, int check)
         {
             if (luck > check)
